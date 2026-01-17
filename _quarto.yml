@@ -1,0 +1,80 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!activity_templates/"
+    - "!assignments/"
+    - "!working/"
+  post-render: "cp -r activities docs/activity_templates" # adds activity qmd as downloadable template
+  resources:
+    - "data/*.csv"
+    # - "activity_templates/*.qmd"
+    - "assignments/*.qmd"
+    - .nojekyll
+
+website:
+  title: "STAT 155"
+  site-url: https://mutasim221B.github.io/Mac-STAT-155-Sp-26/
+  repo-url:  https://github.com/mutasim221b/Mac-STAT-155-Sp-26
+  favicon: favicon-32x32.png
+  navbar:
+    background: primary
+    search: true
+    left:
+      - file: index.qmd
+        text: "Home"
+      - file: syllabus.qmd
+        text: "Syllabus"
+      - file: schedule.qmd
+        text: "Schedule"
+      - sidebar:activities
+      - file: assignments.qmd
+        text: "Practice Problems"
+      - file: project.qmd
+        text: "Project"
+      - file: R_Resources.qmd
+        text: "R Resources"
+
+  sidebar:
+    - id: activities
+      title: "Activities"
+      contents:
+          - "activities/25-f-tests.qmd"
+          - "activities/24-hypothesis-testing-considerations.qmd"
+          - "activities/23-hypothesis-testing-details.qmd"
+          - "activities/22-hypothesis-testing-discovery.qmd"
+          - "activities/21-confidence-intervals.qmd"
+          - "activities/19-20-sampling-dist-clt-bootstrap.qmd"
+          - "activities/18-sampling-normal.qmd"
+          - "activities/17-logistic-regression-II.qmd"
+          - "activities/15+16-Logistic-Regression-I.qmd"
+          - "activities/13+14-mlr-model-building.qmd"
+          - "activities/11+12-mlr-interaction.qmd"
+          - "activities/10-mlr-confounding.qmd"
+          - "activities/09-mlr-principles.qmd"
+          - "activities/08-mlr-intro.qmd"
+          - "activities/07-slr-cat-predictor.qmd"
+          - "activities/06-slr-transformations.qmd"
+          - "activities/05-slr-model-eval.qmd"
+          - "activities/03_04-slr-intro-formalization.qmd"
+          - "activities/02-foundations-univariate.qmd"
+          - "activities/01_foundations_welcome.qmd"
+
+
+  
+  page-footer:
+    left: |
+      &copy; Md Mutasim Billah, 2025<br>
+      All content licensed under ![](https://static.thenounproject.com/png/70967-200.png){height=20px} ([CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/))
+    right: |
+      Site built with [Quarto](https://quarto.org/)
+
+format:
+  html:
+    theme: sandstone
+    # css: styles.css
+    toc: true      
+    code-overflow: wrap
+
+editor: source
