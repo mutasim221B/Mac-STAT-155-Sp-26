@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 
 
 
-You can download the .qmd file for this activity [here](../activity_templates/01_foundations_welcome.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Fall-25/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+You can download the .qmd file for this activity [here](../activity_templates/01_foundations_welcome.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
 
 # Welcome {-}
 

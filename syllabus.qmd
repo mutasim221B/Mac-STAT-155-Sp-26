@@ -1,14 +1,14 @@
 ---
 title: "STAT 155: Introduction to Statistical Modeling  "
-subtitle: "Macalester College, Fall 2025"
+subtitle: "Macalester College, Spring 2026"
 format: 
   html:
     embed-resources: true
     toc: true
 ---
 
--   **Section 03**: M/W/F 09:40-10:40am, THTR 002
--   **Section 04**: M/W/F 12:00-01:00pm, THTR 202
+-   **Section 06**: M/W/F 09:40-10:40am, THTR 203
+-   **Section 07**: M/W/F 10:50-11:50pm, THTR 203
 
 **Welcome to STAT 155!** Whether in life or research, we’re often interested in relationships between 2+ variables. For example, how is one’s commute time to class related to their distance from campus and mode of transportation? Or, how is voter participation related to a person’s age and political affiliation? **Statistical modeling** is the art and science of turning data into information about such relationships of interest.
 
@@ -75,9 +75,9 @@ Outside of my academic work, I enjoy spending time outdoors with family and frie
 **Drop-in (office) hours:**
 
 -   **Location:** My office (OLRI 234)
--   **Times:** M/W/F: 11:10am - 11:40 am, W: 1:20pm - 2:50pm
--   **By Appointment:** I'm also happy to meet one-on-one if my normal drop-in hours don't work for you. Shoot me an email and we can arrange it either in-person or over [zoom](https://macalester.zoom.us/j/99762878654?pwd=gt7VvSNT0ubKsV2icMV3z8J0GyHKMy.1), password: 123456.
--   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 4:00 pm or on weekends may take longer to receive a response.
+-   **Times:** M/W: 12:00pm - 1:00pm (in-person), Thursday: 12pm - 1:30pm AND 2pm - 3pm (Over [zoom](https://macalester.zoom.us/j/99762878654?pwd=gt7VvSNT0ubKsV2icMV3z8J0GyHKMy.1), password: 123456)
+-   **By Appointment:** I'm also happy to meet one-on-one if my normal drop-in hours don't work for you. Shoot me an email and we can arrange it over [zoom](https://macalester.zoom.us/j/99762878654?pwd=gt7VvSNT0ubKsV2icMV3z8J0GyHKMy.1), password: 123456.
+-   **Email Response Time:** I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response.
 
 ## About your preceptors
 
@@ -105,10 +105,10 @@ In hiring preceptors, we prioritize and emphasize kindness and respect. I expect
 
 There is no required textbook for this course. Throughout the course, readings may be assigned from these [notes](https://mac-stat.github.io/Stat155Notes/), or other sources. 
 
-The [online course manual](https://mutasim221b.github.io/Mac-STAT-155-Fall-25/) includes all in-class activities (with solutions) and a daily [Schedule](schedule.qmd). All links and materials needed will be provided on the schedule tab of this website.
+The [online course manual](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) includes all in-class activities (with solutions).
 
 ## Moodle
-[Moodle](https://moodle.macalester.edu/) includes general resources, a broad course calendar, submission links, feedback, and a forum for student questions.
+[Moodle](https://moodle.macalester.edu/) includes announcements, general resources, a broad course calendar, submission links, feedback, and a forum for student questions.
 
 
 ## Statistical software
@@ -150,14 +150,14 @@ rely on receiving responses outside weekdays between 9am & 5pm.
 
 ## What to do when you have a question for me?
 
-- If it’s non-private (e.g. about policies, homework (Practice Problems), class activities, etc), you must post it on STAT 155 Discussion Board in Moodle. Remember- collaboration is the KEY!
+- If it’s non-private (e.g. about policies, homework (Practice Problems), class activities, etc), you should post it on STAT 155 Discussion Board in Moodle. Remember- collaboration is the KEY!
 - If it’s personal (e.g. about an absence), email me.
 - It’s good, professional practice to check whether your question is already answered in the provided resources. For example:
   - **Info** (what to do if you miss class): syllabus
   - **Due dates**: course calendar at the top of Moodle + course schedule in the online manual
-  - **Quiz dates**: syllabus + course calendar at the top of Moodle + course schedule in the online manual
-  - **Homework policies & grading**: [homework policies & grading](https://docs.google.com/document/d/1gffiL-OKMrHSqgNijI2pnjliyzNWg8vIIfoP2MY_DSA/edit?tab=t.0#heading=h.y44zqzjp7zgk) doc
-  - **Finals week**: syllabus + course calendar at the top of Moodle + course schedule in the online manual
+  - **Quiz dates**: syllabus + course calendar at the top of Moodle + announcement on Moodle
+  - **Homework policies & grading**: [homework policies & grading](https://docs.google.com/document/d/1blw99F3L2WYTpfjvkRwOcmW8uGBAZvrzQPuyIVZtnxQ/edit?usp=sharing) doc
+  - **Finals week**: syllabus + course calendar at the top of Moodle + announcement on Moodle
 
 ## Thriving in STAT 155
 
@@ -189,7 +189,7 @@ Actively participate in the class & take ownership of your learning. PLEASE: Don
 I provide transparent accommodations to all students. It helps reduce stress and the “hidden curriculum” (not everybody feels comfortable asking for flexibility).
 
 - **Missed Class**: It’s okay to miss class in the case of an emergency. Please see the 'Absences' tab below for details.
-- **Practice Problems (PP)**: Limited extensions and limited mistakes without penalty. Please *carefully* go through all the sections from [STAT 155 PP Policies & Grading](https://docs.google.com/document/d/1gffiL-OKMrHSqgNijI2pnjliyzNWg8vIIfoP2MY_DSA/edit?tab=t.0#heading=h.b4wcvjckjps) doc.
+- **Practice Sets (PS)**: Limited extensions and limited mistakes without penalty. Please *carefully* go through all the sections from [STAT 155 PS Policies & Grading](https://docs.google.com/document/d/1blw99F3L2WYTpfjvkRwOcmW8uGBAZvrzQPuyIVZtnxQ/edit?usp=sharing) doc.
 - **Checkpoints**: Some class periods will have course videos and readings assigned ahead of time. For each class period where this is the case, a checkpoint quiz (on Moodle) must be completed by 09:00 am. Checkpoints may be attempted as many times as you’d like, but to earn completion credit for a given checkpoint you must score 100% by your final attempt. These short quizzes are designed to ensure that you stay on top of course material, since much of the content in this course builds on itself.
 - **Quizzes**: Limited revisions. Additional flexibility will be provided in rare extenuating circumstances, upon discussion. Exceptions must be discussed with me (not assumed) early on (not after the fact). 
 
@@ -295,14 +295,13 @@ Complete at least 13 (out of 17) CPs (≈80%) without affecting your final grade
 - CPs are due **09:00am** on the assigned date. **There are no extensions for CPs**, as they are important *preparation* for the relevant class session.  
 :::
 
-## (4) Practice (Practice Problem Sets)
+## (4) Practice (Practice Sets)
 
-In 8 practice problem sets (PP), you will practice and explore the course material in more depth. The following flexibility is built in to help reduce stress and to facilitate deeper learning. Detailed directions and policies are [here](https://docs.google.com/document/d/1gffiL-OKMrHSqgNijI2pnjliyzNWg8vIIfoP2MY_DSA/edit?tab=t.0#heading=h.y44zqzjp7zgk).
+In 8 practice sets (PS), you will practice and explore the course material in more depth. The following flexibility is built in to help reduce stress and to facilitate deeper learning. Detailed directions and policies are [here](https://docs.google.com/document/d/1blw99F3L2WYTpfjvkRwOcmW8uGBAZvrzQPuyIVZtnxQ/edit?usp=sharing).
 
 - **Grading**: PP grades will be based on Exercises & Presentation. You can make some mistakes without it chipping away at your score (e.g. you will earn 5/5 points on an exercise if it’s at least 90% correct & complete).
-- **Dropped score**: *IF* you submit and demonstrate clear effort on all 8 PPs, your lowest PP score will be dropped from your final grade.
 - **Extensions**: Limited extensions will be provided. 
-- **STAT 155 Discussion Board:** Use the Moodle board as your first stop for Practice Problems (PP):
+- **STAT 155 Discussion Board:** Use the Moodle board as your first stop for Practice Sets (PS):
     - Ask first: Post questions about PP on Moodle. Include the problem number, a brief summary of your approach, and where you’re stuck. For coding, share the entire code chunk for the related problem.
 
     - Help each other: If you know (or suspect) the answer, reply! Explaining your reasoning helps everyone learn.
@@ -330,12 +329,12 @@ More details will be provided later in the semester. Here are some basics:
 
 Your course engagement, collaboration, preparation, practice, and application will support your deeper understanding of the course material. This will be assessed through three in-person quizzes. You must schedule all travel and other commitments around them — there will not be any alternative quiz times.
 
-- **Quiz 1:** Wednesday, 09/24 in class (tentative) 
-- **Quiz 2:** Wednesday, 10/29 in class (tentative)
+- **Quiz 1:** Monday, 02/16 in class 
+- **Quiz 2:** March, 03/30 in class 
 - **Quiz 3:** *Finals week*  
   - The exam will be written to take ~1.25 hours, but you will have the full 2-hour period to complete it.  
-    - 09:40–10:40 am section 03: Monday 12/15- 08:00am-10:00am
-    - 12:00–01:00 pm section 04: Saturday 12.13- 08:00am-10:00am
+    - 09:40–10:40 am section 06: TBD
+    - 10:50–11:50 pm section 07: TBD
 
 
 ::: {.callout-warning title="📜 Quiz Policies"}
@@ -347,7 +346,7 @@ Your course engagement, collaboration, preparation, practice, and application wi
 - **Quizzes 2 & 3 will be cumulative.** This is unavoidable as the material builds upon itself.  
 
 - **Quiz corrections:**  
-  You can earn up to 50% of missed points back on Quizzes 1 & 2 if you:  
+  You can earn up to 33% of missed points back on Quizzes 1 & 2 if you:  
    1. Write a reflection of how you prepared for the quiz and where you felt strongest or more uncertain in your understanding before taking the quiz; and  
    2. Submit your quiz corrections along with your reflection to the instructor, no later than one week after quizzes have been handed back.  
    **Note**: Quiz 3 corrections are not allowed due to time constraints at the end of the semester.
@@ -367,9 +366,9 @@ The grading system in this course is designed to help you achieve the learning o
 ::: {.column width="30%"}
 ### Course Percentage
 
-$\tfrac{1}{3}$ Practice Problems +  
-$\tfrac{1}{3}$ Quiz total +  
-$\tfrac{1}{3}$ Project
+25% Practice Sets +  
+50% Quizzes +  
+25% Project
 
 | Grade | Course percentage |
 |------:|:-------------------|
@@ -459,7 +458,7 @@ You may also contact Macalester’s Title IX Coordinator directly (phone: 651-69
 When you have questions, please stop me during class, ask your neighbor, email me and come to office hours. Saying *"I don't understand"* is an important part of learning and it helps others around you.
 :::
 
-::: {.callout-note title="🤝 Come to Office Hours"}
+::: {.callout-note title="🤝 Come to Office Hours or Join over Zoom"}
 Office hours are a great time to talk about course material, study strategies, selecting courses, declaring a major, grad school and/or career planning, or life in general. You don’t need to have a specific question in order to attend: it can also be a space to review concepts, talk through examples, or just chat!
 :::
 
