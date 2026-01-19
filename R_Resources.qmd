@@ -25,7 +25,7 @@ The videos below introduce R and RStudio and show how to install them on your co
 
 ::: {.callout-warning}
 ### Important
-Version numbers in the videos are out-of-date. Please download the *latest* versions of both R and RStudio. As of August 25, 2025, the latest versions are: R **4.5.2** and RStudio **RStudio-2026.01.0-392**.  
+Version numbers in the videos are out-of-date. Please download the *latest* versions of both R and RStudio. As of January 19, 2026, the latest versions are: R **4.5.2** and RStudio **RStudio-2026.01.0-392**.  
 :::
 
 ### Installation / Overview
