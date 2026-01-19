@@ -107,6 +107,8 @@ There is no required textbook for this course. Throughout the course, readings m
 
 The [online course manual](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) includes all in-class activities (with solutions).
 
+See the rough [schedule](https://docs.google.com/spreadsheets/d/106LzAa_RC8MoG_Ah2B_JWV76Nb1_0YsnsHjqL1VSWC4/edit?usp=sharing) of the course, which is subject to change as needed.
+
 ## Moodle
 [Moodle](https://moodle.macalester.edu/) includes announcements, general resources, a broad course calendar, submission links, feedback, and a forum for student questions.
 

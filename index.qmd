@@ -4,7 +4,7 @@ sidebar: false
 ---
 
 # STAT 155: Introduction to Statistical Modeling  
-Macalester College, Fall 2025  
+Macalester College, Spring 2026
 
 Statistics is not just about theories & numbers — it’s about making sense of the world.  
 
