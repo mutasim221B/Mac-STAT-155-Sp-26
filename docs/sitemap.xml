@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/template_qmds/01-foundations-welcome-notes.html</loc>
-    <lastmod>2025-09-01T16:42:57.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/schedule.html</loc>
-    <lastmod>2026-01-19T18:32:43.578Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/index.html</loc>
-    <lastmod>2026-01-19T18:55:19.605Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/01_foundations_welcome.html</loc>
-    <lastmod>2026-01-19T18:52:00.923Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/R_Resources.html</loc>
-    <lastmod>2026-01-19T19:36:21.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/assignments.html</loc>
-    <lastmod>2026-01-19T18:34:42.776Z</lastmod>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/syllabus.html</loc>
+    <lastmod>2026-01-20T16:17:24.434Z</lastmod>
   </url>
   <url>
     <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/project.html</loc>
     <lastmod>2026-01-19T18:33:24.500Z</lastmod>
   </url>
   <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/syllabus.html</loc>
-    <lastmod>2026-01-19T19:45:44.757Z</lastmod>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/assignments.html</loc>
+    <lastmod>2026-01-19T18:34:42.776Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/R_Resources.html</loc>
+    <lastmod>2026-01-19T19:36:21.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/01_foundations_welcome.html</loc>
+    <lastmod>2026-01-26T15:18:25.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/index.html</loc>
+    <lastmod>2026-01-19T18:55:19.605Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/schedule.html</loc>
+    <lastmod>2026-01-26T14:36:02.712Z</lastmod>
   </url>
 </urlset>

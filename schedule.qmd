@@ -3,5 +3,5 @@ title: "Course Schedule"
 sidebar: false
 ---
 
-See the rough [schedule](https://docs.google.com/spreadsheets/d/106LzAa_RC8MoG_Ah2B_JWV76Nb1_0YsnsHjqL1VSWC4/edit?usp=sharing) of the course, which is subject to change as needed. Any urgent announcements will be made over email (moodle).
+See the rough [schedule](https://docs.google.com/spreadsheets/d/1KVGfNFtPJ5tO4GAkvq9dXhBtnX7cggWG9x9UgLSsv0o/edit?usp=sharing) of the course, which is subject to change as needed. I will post the updated weekly schedule here. Any urgent announcements will be made over email (moodle).
 

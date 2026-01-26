@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 
 
 
-You can download the .qmd file for this activity [here](../activity_templates/01_foundations_welcome.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Fall-25/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+You can download the .qmd file for this activity [here](../activity_templates/01_foundations_welcome.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
 
 # Welcome {-}
 
@@ -32,7 +32,6 @@ You can download the .qmd file for this activity [here](../activity_templates/01
 
 **Settling in**
 
-- [We need to change the setup of the classroom (unfortunately!). Let us start an unintended class activity of making pods (by joining two tables and 4 chairs face-to-face)]
 
 - Sit in groups of **4 (preferably) or 3 (at least)**. Your group should include:
     - *nobody* that you already know
@@ -44,16 +43,15 @@ You can download the .qmd file for this activity [here](../activity_templates/01
 
 
 - Open the online manual:
-    - [https://mutasim221b.github.io/Mac-STAT-155-Fall-25/](https://mutasim221b.github.io/Mac-STAT-155-Fall-25/) (also linked in Moodle)
+    - [https://mutasim221b.github.io/Mac-STAT-155-Fall-25/](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (also linked in Moodle)
     - Top bar < Activities < Collecting and Summarizing Data
-    - We will do some reading, live-note taking, in-class activities, solving examples, doing exercises...until we ran out of time!
 
 
 
 \
 
 
-If you have applied/approved for the waitlist, be sure to approach me after the class & register for the course *today*. At that point you will be added to Moodle.
+If you have approved for the waitlist, and I haven't overrode the registration yet, be sure to approach me after the class & register for the course *today*. At that point you will be added to Moodle.
 
 
 \
@@ -66,27 +64,7 @@ If you have applied/approved for the waitlist, be sure to approach me after the 
 **Statistical Modeling?!**
 
 Statistical Modeling is the art and science of turning data into information about relationships of interest.
-For example, the following are just a few Mac faculty / offices that use statistical models to study relationships:
 
-- **Michelle Tong (BIOL):** [Making "Good" Choices: Social Isolation in Mice Exacerbates the Effects of Chronic Stress on Decision Making](https://www.frontiersin.org/journals/behavioral-neuroscience/articles/10.3389/fnbeh.2020.00081/full)    
-- **Ariel James (PSYCH):** [Language Experience Predicts Eye Movements During Online Auditory Comprehension](https://journalofcognition.org/articles/10.5334/joc.285)
-- **Sarah West (ECON):** [Redevelopment along arterial streets: The effects of light rail on land use change](https://onlinelibrary.wiley.com/doi/10.1111/1540-6229.12407)
-- **Admissions** uses data to help understand potential enrollments
-- **Athletics** uses data (eg: to better understand the relationship between sleep and outcomes)
-
-
-
-
-
-\
-\
-\
-\
-
-
-
-
-**This class is designed for you.**    
 
 
 - STAT 155 is a modern, non-traditional introduction to statistics. We'll explore sophisticated tools that typically aren't covered until a second course in statistics.       
@@ -100,7 +78,7 @@ For example, the following are just a few Mac faculty / offices that use statist
 
 - STAT 155 emphasizes statistical applications and intuition over theory (and memorizing formulas). To focus on applications and intuition, we'll utilize statistical software (R/RStudio). It's assumed that you are totally new to RStudio! More on this later...
 
-- Even though I have been teaching Statistics since 2018 (as GTI!), this is the first time I am teaching this course at Mac! Please let me know as soon as you see any broken links/typos/etc., or you have any question/problem/concern.
+- Please let me know as soon as you see any broken links/typos/etc., or you have any question/problem/concern.
 
 
 
@@ -134,9 +112,9 @@ Go to your class-notes to see what we covered in live-note taking!
 \
 
 
-**EXAMPLE 1: Tidy data (Class Activities!)**
+**EXAMPLE 1: Tidy data **
 
-Welcome to the first in-class activities of STAT 155! Fill out the [Day 1 Activities](https://forms.gle/nV88ppYJmybHy8vx5) form of the following questions (anonymous). We'll come back to this in a future class. Wait until everyone in your group is done with this.
+Refering to the questions from the [Fun Survey](https://docs.google.com/forms/d/e/1FAIpQLSdAoRmJH73T3X2W9h-3n9WigEMKaN2oFZA9YWMYv12vaOOp5A/viewform)!
 
 1.  How many hours of sleep did you get last night? 
 
@@ -153,6 +131,9 @@ Welcome to the first in-class activities of STAT 155! Fill out the [Day 1 Activi
 7.  Is it your birthday this semester? (yes/no)
 
 8.  How many unread emails do you have in your inbox right now?
+
+
+
 
 \
 
@@ -376,7 +357,7 @@ How we do this depends on:
 1. file format (eg: .xls Excel spreadsheet, .csv, .txt)
 2. file location (eg: online, on your desktop, built into RStudio itself).
 
-The data from the survey you took before class is stored as a **.csv** file **online**.
+The data from the similar survey collected in fall 2024 stored as a **.csv** file **online**.
 Import this data using the `read_csv()` function, and store it as `survey` using the code below:
 
 First, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):
@@ -414,7 +395,7 @@ In the modern era, datasets often contain hundreds of variables and millions of 
 
 ## Example 5: Get to know the data {-}
 
-PAUSE: Make sure you're still in sync with your group.
+PAUSE: Make sure you're sync with your group.
 
 Before we can learn anything from our data, we must understand its structure.
 For each function below:
@@ -553,146 +534,7 @@ d. Show the first 6 rows of the dataset. NOTE: This gives us a quick glimpse wit
 # Solutions {-}
 
 
-## Exercise 1: Use R as a calculator {-}
-
-```{r}
-4 + 2
-4^2
-4*2
-#4(2) # We need to use * for multiplication
-```
-
-
-## Exercise 2: Functions and arguments {-}
-
-
-```{r}
-# Calculate the square root of 9
-sqrt(9)
-
-# Calculate the number of characters in the word "macalester"
-nchar("macalester")
-
-# Calculate the square root of the number of characters in the word "snow"
-sqrt(nchar("snow"))
-```
-
-
-
-```{r}
-# Repeat the number 2, 5 times
-rep(x = 2, times = 5)
-
-# Repeat the number 2, 5 times
-rep(times = 5, x = 2)
-
-# Repeat the number 2, 5 times
-rep(2, 5)
-
-# Repeat the number 5, 2 times
-rep(5, 2)
-```
-
-
-
-
-## Exercise 3: Save it for later {-}
-
-
-```{r}
-# Nothing shows up -- all we're doing here is storing -13 as degrees_c
-degrees_c <- -13
-
-# Print the contents of degrees_c
-degrees_c
-
-# We can "do math" with the contents of degrees_c
-degrees_c * (9/5) + 32
-```
-
-
-
-
-## Exercise 4: Import data {-}
-
-
-
-```{r message = FALSE, warning = FALSE}
-# Load the tidyverse package
-library(tidyverse)
-
-# Import the data
-survey <- read_csv("https://mac-stat.github.io/data/112_fall_2024_survey.csv")
-```
-
-
-
-## Exercise 5: Get to know the data {-}
-
-
-```{r}
-# Dimensions of the survey data set
-# First number = number of rows
-# Second number = number of columns
-dim(survey)
-```
-
-```{r}
-# Number of rows in the survey data set
-nrow(survey)
-```
-
-```{r}
-# First 6 rows (the head) of the survey data set
-head(survey)
-```
-
-```{r}
-# First 3 rows of the survey data set
-head(survey, 3)
-```
-
-```{r}
-# Last 6 rows (the tail) of the survey data set
-tail(survey)
-```
-
-```{r}
-# Names of the variables in the survey data set
-names(survey)
-```
-
-```{r}
-# Structure of all variables in the survey data set
-str(survey)
-```
-
-
-
-
-## Exercise 6: Code = communication {-}
-
-
-```{r}
-# Make it less smooshy. Add spaces!
-seq(from = 1, to = 9, by = 2)
-
-# Use consistent spacing
-seq(from = 1, to = 9, by = 2)
-
-# Use more descriptive names when storing objects
-my_output <- -13
-
-# Use a shorter and easier to read name
-celsius_today <- -13
-CelsiusToday  <- -13
-```
-
-
-## Exercise 7: You will make so many mistakes! {-}
-
-
-## Exercise 8: Your turn {-}
+## Exercise: Your turn {-}
 
 ```{r}
 # a
