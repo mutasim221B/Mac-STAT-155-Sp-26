@@ -225,6 +225,7 @@ This error is *important* to learning how R code does and doesn't work.
 4 + 2
 ```
 
+
 ```{r eval = FALSE}
 4^2
 ```
