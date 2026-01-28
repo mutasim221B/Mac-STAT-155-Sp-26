@@ -25,7 +25,7 @@
     "href": "syllabus.html#about-your-professor",
     "title": "STAT 155: Introduction to Statistical Modeling",
     "section": "About your professor",
-    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Olin-Rice 234\nEmail: mbillah@macalester.edu\n\n\n\n\n\n\nNotes from “your professor”\n\n\n\nGreetings! You can call me Bill or Professor Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat—those courses often emphasized formulas over real understanding. That experience has shaped my teaching—I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 155 and to create a more meaningful experience—one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nDrop-in (office) hours:\n\nLocation: My office (OLRI 234) and over zoom, password: 123456\nTimes: M/W: 12:00pm - 12:30pm (in-person), T/TR: 2pm - 3pm (Over zoom, password: 123456)\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in/virtual hours don’t work for you. Shoot me an email and we can arrange it in-person or over zoom, password: 123456.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response."
+    "text": "About your professor\n\nMd Mutasim Billah, PhD\nPronunciation: listen here\nOffice: Olin-Rice 234\nEmail: mbillah@macalester.edu\n\n\n\n\n\n\nNotes from “your professor”\n\n\n\nGreetings! You can call me Bill or Professor Billah & I use he/him pronouns. Back when I was an undergrad student, I didn’t have the best experience in Intro Stat—those courses often emphasized formulas over real understanding. That experience has shaped my teaching—I concentrate on illustrating how statistical theories connect and can be applied in the real world. I’m excited to teach STAT 155 and to create a more meaningful experience—one that helps all students feel confident applying it beyond the classroom. My methodological research lies at the intersection of statistical genetics, biostatistics, and genomics. My current research interests include developing novel statistical methods and computationally efficient bioinformatics tools, leveraging modern machine- and deep-learning approaches analyze high-dimensional next-generation sequencing and multi-omics data to identify genes and regulatory mechanisms underlying complex diseases. Outside of my academic work, I enjoy spending time outdoors with family and friends or cooking variety of foods. If you can’t find me anywhere, I might be busy playing soccer or exploring new worlds on my PS5 Pro!\n\n\nOffice hours:\n\nLocation: My office (OLRI 234) and over zoom, password: 123456\nTimes: M/W: 12:00pm - 12:30pm (in-person), T/TR: 2pm - 3pm (Over zoom, password: 123456)\nBy Appointment: I’m also happy to meet one-on-one if my normal drop-in/virtual hours don’t work for you. Shoot me an email and we can arrange it in-person or over zoom, password: 123456.\nEmail Response Time: I do my best to reply to emails promptly during weekdays. Please note that messages sent after 3:00 pm or on weekends may take longer to receive a response."
   },
   {
     "objectID": "syllabus.html#about-your-preceptors",
@@ -210,34 +210,6 @@
     "text": "Please review the Practice Problems Policies document before proceeding!\n…due at 11:59 pm Central on Moodle!"
   },
   {
-    "objectID": "R_Resources.html",
-    "href": "R_Resources.html",
-    "title": "R and RStudio Resources",
-    "section": "",
-    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
-  },
-  {
-    "objectID": "R_Resources.html#getting-help",
-    "href": "R_Resources.html#getting-help",
-    "title": "R and RStudio Resources",
-    "section": "",
-    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
-  },
-  {
-    "objectID": "R_Resources.html#getting-started",
-    "href": "R_Resources.html#getting-started",
-    "title": "R and RStudio Resources",
-    "section": "Getting Started",
-    "text": "Getting Started\nThe videos below introduce R and RStudio and show how to install them on your computer. Start with the overview, then watch the step-by-step video for your operating system.\nDownload links (mentioned in the videos): - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nVersion numbers in the videos are out-of-date. Please download the latest versions of both R and RStudio. As of January 19, 2026, the latest versions are: R 4.5.2 and RStudio RStudio-2026.01.0-392.\n\n\n\nInstallation / Overview\n\nInstalling R and RStudio (Overview) (Length: 4:30)\n\nPick one of the following: - Mac — Installing R and RStudio Step-by-Step (Length: 3:24) - Windows — Installing R and RStudio Step-by-Step (Length: 5:43)\nIf you run into installation issues, contact me right away. If we can’t get RStudio working locally, you can use Macalester’s online RStudio server:\nQuick intro video"
-  },
-  {
-    "objectID": "R_Resources.html#intro-videos-to-r-watch-in-order",
-    "href": "R_Resources.html#intro-videos-to-r-watch-in-order",
-    "title": "R and RStudio Resources",
-    "section": "Intro Videos to R (watch in order)",
-    "text": "Intro Videos to R (watch in order)\n\nIntro to R and RStudio (11:31)\nR Data Types (8:05)\nR Error Messages and Troubleshooting (Optional) (7:52)\nIntro to RMarkdown / Quarto (9:33)\nFile Structure & Organization (Optional)\n\nMac (5:13)\nWindows (7:44)\n\nTips on File Naming & Organization (Optional)\nR Packages (7:30)\n\n\nYou can adjust video speed and pause as needed. If anything doesn’t work, please let me know so we can fix it quickly."
-  },
-  {
     "objectID": "activities/01_foundations_welcome.html",
     "href": "activities/01_foundations_welcome.html",
     "title": "Collecting and Summarizing Data",
@@ -355,6 +327,354 @@
     "text": "Exercise: Your turn\n\n# a\npeaks &lt;- read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\")\n## Error in read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv\"): could not find function \"read_csv\"\n\n# b\nnames(peaks)\n## Error: object 'peaks' not found\n\n# c\ndim(peaks)\n## Error: object 'peaks' not found\nnrow(peaks)\n## Error: object 'peaks' not found\n\n# d\nhead(peaks)\n## Error: object 'peaks' not found",
     "crumbs": [
       "Collecting and Summarizing Data"
+    ]
+  },
+  {
+    "objectID": "R_Resources.html",
+    "href": "R_Resources.html",
+    "title": "R and RStudio Resources",
+    "section": "",
+    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
+  },
+  {
+    "objectID": "R_Resources.html#getting-help",
+    "href": "R_Resources.html#getting-help",
+    "title": "R and RStudio Resources",
+    "section": "",
+    "text": "Crowd-sourced R functions\nInteractive RStudio tutorials (R basics, data viz, and more)\nMarkdown (Quarto) basics, and Quarto/RStudio tutorial\nRStudio cheatsheets\nGoogle it! If you have a question about R, someone else probably asked it. Add “R tidyverse” to your search term.\nExample: scatterplot R tidyverse\nNote about ChatGPT for code: Please avoid using ChatGPT as a first resort for R code. It often suggests overly wordy or unfamiliar approaches. Our goal is for you to understand the code you write; sticking to tools and syntax we use in class will support your learning best."
+  },
+  {
+    "objectID": "R_Resources.html#getting-started",
+    "href": "R_Resources.html#getting-started",
+    "title": "R and RStudio Resources",
+    "section": "Getting Started",
+    "text": "Getting Started\nThe videos below introduce R and RStudio and show how to install them on your computer. Start with the overview, then watch the step-by-step video for your operating system.\nDownload links (mentioned in the videos): - R: http://cran.r-project.org/ - RStudio: https://www.rstudio.com/products/rstudio/download/#download\n\n\n\n\n\n\nImportant\n\n\n\nVersion numbers in the videos are out-of-date. Please download the latest versions of both R and RStudio. As of January 19, 2026, the latest versions are: R 4.5.2 and RStudio RStudio-2026.01.0-392.\n\n\n\nInstallation / Overview\n\nInstalling R and RStudio (Overview) (Length: 4:30)\n\nPick one of the following: - Mac — Installing R and RStudio Step-by-Step (Length: 3:24) - Windows — Installing R and RStudio Step-by-Step (Length: 5:43)\nIf you run into installation issues, contact me right away. If we can’t get RStudio working locally, you can use Macalester’s online RStudio server:\nQuick intro video"
+  },
+  {
+    "objectID": "R_Resources.html#intro-videos-to-r-watch-in-order",
+    "href": "R_Resources.html#intro-videos-to-r-watch-in-order",
+    "title": "R and RStudio Resources",
+    "section": "Intro Videos to R (watch in order)",
+    "text": "Intro Videos to R (watch in order)\n\nIntro to R and RStudio (11:31)\nR Data Types (8:05)\nR Error Messages and Troubleshooting (Optional) (7:52)\nIntro to RMarkdown / Quarto (9:33)\nFile Structure & Organization (Optional)\n\nMac (5:13)\nWindows (7:44)\n\nTips on File Naming & Organization (Optional)\nR Packages (7:30)\n\n\nYou can adjust video speed and pause as needed. If anything doesn’t work, please let me know so we can fix it quickly."
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html",
+    "href": "activities/02-foundations-univariate.html",
+    "title": "Univariate Visualization & Summaries",
+    "section": "",
+    "text": "You can download the .qmd file for this activity here and open in R-studio. The rendered version is posted in the course website (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#learning-goals",
+    "href": "activities/02-foundations-univariate.html#learning-goals",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of this activity, you should be able to:\n\nWhat summarizations and visualizations are appropriate for categorical or quantitative variables\nWrite R code to read in data and to summarize and visualize a single variable at a time.\nInterpret key features of barplots, boxplots, histograms, and density plots\nDescribe information about the distribution of a quantitative variable using the concepts of shape, center, spread, and outliers\nRelate summary statistics of data to the concepts of shape, center, spread, and outliers",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#readings-and-videos",
+    "href": "activities/02-foundations-univariate.html#readings-and-videos",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Readings and videos",
+    "text": "Readings and videos\nYou should have gone through the followings before the class and finished checkpoint quizzes!\n\nReading: Sections 2.1-2.4, 2.6 in the STAT 155 Notes\nVideos:\n\nUnivariate summaries (slides)\n\nPart 1\nPart 2\n\nR Code for Categorical Visualization and Summarization\nR Code for Quantitative Visualization and Summarization\nQuarto docs\n\n\n\nFile organization: Save this file in the “Activities” subfolder of your “STAT155” folder.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-1-importing-and-getting-to-know-the-data",
+    "href": "activities/02-foundations-univariate.html#exercise-1-importing-and-getting-to-know-the-data",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 1: Importing and getting to know the data",
+    "text": "Exercise 1: Importing and getting to know the data\nFirst, in the Console pane of RStudio, run the following command to install some necessary packages (you will need to do this any time you are installing a new package):\ninstall.packages(\"tidyverse\") # Have you installed it?\nNow, in the Quarto pane, run the following code chunk to load the package and load a dataset (you can either click the green arrow in the top right of the code chunk, put your cursor in the code chunk and hit Ctrl+Alt+C [on Windows/Linux] or Command+Option+C [on Mac]).\n\n# Load package\nlibrary(tidyverse)\n\n# Read in the Dear Abby data\nabby &lt;- read_csv(\"https://mac-stat.github.io/data/dear_abby.csv\")\n\nThroughout this activity, we’ll work only with the most recent year of data, from 2017. Run the following chunk:\n\n# Wrangle the Dear Abby data\n# Ignore this code for now!\nabby &lt;- abby %&gt;% \n  filter(year == 2017) %&gt;% \n  mutate(month = month(month, label = TRUE)) %&gt;%\n  mutate(\n    parents = str_detect(question_only, \"mother|mama|mom|father|papa|dad\"),\n    marriage = str_detect(question_only, \"marriage|marry|married\"),\n    money = str_detect(question_only, \"money|finance\")\n  ) %&gt;%\n  rowwise() %&gt;%\n  mutate(\n    themes = c(\n      if (parents) \"parents\",\n      if (marriage) \"marriage\",\n      if (money) \"money\"\n    ) %&gt;% paste(collapse = \", \"),\n    themes = ifelse(themes == \"\", \"other\", themes)\n  ) %&gt;%\n  ungroup() %&gt;% \n  select(year, month, day, question_only, bing_pos, afinn_overall, afinn_pos, afinn_neg, themes)\n\n\nClick on the Environment tab (generally in the upper right hand pane in RStudio). Then click the abby line. The abby data will pop up as a separate pane (like viewing a spreadsheet) – check it out.\nIn this tidy dataset, what is the unit of observation? That is, what is represented in each row of the dataset?\nWhat term do we use for the columns of the dataset?\nTry out each function below. Identify what each function tells you about the abby data and note this in the ???:\n\n\n# ??? [what do both numbers mean?]\ndim(abby)\n## [1] 514   9\n\n\n# ???\nnrow(abby)\n## [1] 514\n\n\n# ???\nncol(abby)\n## [1] 9\n\n\n# ???\nhead(abby)\n## # A tibble: 6 × 9\n##    year month day   question_only     bing_pos afinn_overall afinn_pos afinn_neg\n##   &lt;dbl&gt; &lt;ord&gt; &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n## 1  2017 Aug   30    \"i moved to the …    0.75             14        16         2\n## 2  2017 Aug   30    \"under what circ…   NA                NA        NA        NA\n## 3  2017 Aug   28    \"i'm not a dog p…    0.333             5         5         0\n## 4  2017 Aug   28    \"my 62-year-old …    0.143           -11         8        19\n## 5  2017 Aug   27    \"i have a friend…    0.222             0         7         7\n## 6  2017 Aug   27    \"i have been sel…    0.333            -5         2         7\n## # ℹ 1 more variable: themes &lt;chr&gt;\n\n\n# ???\nnames(abby)\n## [1] \"year\"          \"month\"         \"day\"           \"question_only\"\n## [5] \"bing_pos\"      \"afinn_overall\" \"afinn_pos\"     \"afinn_neg\"    \n## [9] \"themes\"\n\n\n[OPTIONAL] If you’re not sure how exactly to use a function, you can pull up a built-in help page with information about the arguments a function takes (i.e., what goes inside the parentheses), and the output it produces. To do this, click inside the Console pane, and enter ?function_name. For example, to pull up a help page for the dim() function, we can type ?dim and hit Enter. Try pulling up the help page for the read_csv() function we used to load the dataset.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-2-preparing-to-summarize-and-visualize-the-data",
+    "href": "activities/02-foundations-univariate.html#exercise-2-preparing-to-summarize-and-visualize-the-data",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 2: Preparing to summarize and visualize the data",
+    "text": "Exercise 2: Preparing to summarize and visualize the data\nIn the next exercises, we will be exploring themes in the Dear Abby questions and the overall “mood” or sentiment of the questions. Before continuing, read the codebook for this dataset for some context about sentiment analysis, which gives us a measure of the mood/sentiment of a text.\n\nWhat sentiment variables do we have in the dataset? Are they quantitative or categorical?\nCheck out the theme variable. Is this quantitative or categorical?\nWhat visualizations are appropriate for looking at the distribution of a single quantitative variable? What about a single categorical variable?",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-3-exploring-themes-in-the-letters",
+    "href": "activities/02-foundations-univariate.html#exercise-3-exploring-themes-in-the-letters",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 3: Exploring themes in the letters",
+    "text": "Exercise 3: Exploring themes in the letters\n\nThe code below makes a barplot of the themes variable using the ggplot2 visualization package. Before making the plot, make note of what you expect the plot might look like. (This might be hard–just do your best!) Then compare to what you observe when you run the code chunk to make the plot. (Clearly defining your expectations first is good scientific practice to avoid confirmation bias.)\n\n\n# Load package\n# install.packages(\"ggplot2\") # Run in R Console first time to install (copy without '#')\nlibrary(ggplot2)\n\n# barplot\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\n\n\n\n\n\n\n\n\n\nWe can follow up on the barplot with a simple numerical summary. Whereas the ggplot2 package is great for visualizations, dplyr is great for numerical summaries. The code below constructs a table of the number of questions with each theme. Make sure that these numerical summaries match up with what you saw in the barplot.\n\n\n# install.packages(\"dplyr\")\n# Construct a table of counts\nabby %&gt;% \n    count(themes)\n## # A tibble: 8 × 2\n##   themes                       n\n##   &lt;chr&gt;                    &lt;int&gt;\n## 1 marriage                    75\n## 2 marriage, money              5\n## 3 money                       21\n## 4 other                      234\n## 5 parents                    127\n## 6 parents, marriage           33\n## 7 parents, marriage, money     4\n## 8 parents, money              15\n\n\nBefore proceeding, let’s break down the plotting code above. Run each chunk to see how the two lines of code above build up the plot in “layers”.\n\n\n# sets up the \"canvas\" of the plot with axis labels\nggplot(abby, aes(x = themes)) \n\n\n\n\n\n\n\n\n\n# Adds the bars- Any Problem you notice?\nggplot(abby, aes(x = themes)) +\n    geom_bar() \n\n\n\n\n\n\n\n\n\n# Rotates the x axis labels\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) \n\n\n\n\n\n\n\n\n\n# Changes the visual theme of the plot with a white background and removes gridlines\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme_classic() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#live-note-taking",
+    "href": "activities/02-foundations-univariate.html#live-note-taking",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Live Note-Taking!",
+    "text": "Live Note-Taking!",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-4-exploring-sentiment",
+    "href": "activities/02-foundations-univariate.html#exercise-4-exploring-sentiment",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 4: Exploring sentiment",
+    "text": "Exercise 4: Exploring sentiment\nWe’ll look at the distribution of the bing_pos sentiment variable and associated summary statistics.\n\n\n\n\nThe code below creates a boxplot of this variable. In the comment, make note of how this code is similar to the code for the barplot above.\n\n\n# ???\nggplot(abby, aes(x = bing_pos)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\n\nChallenge: Using the code for the barplot and boxplot as a guide, try to make a histogram and a density plot of the overall average ratings.\n\nWhat information is given by the tallest bar of the histogram?\nHow would you describe the shape of the distribution?\n\n\n\n# Histogram\n\n# Density plot\n\n\nWe can compute summary statistics (numerical summaries) for a quantitative variable using the summary() function or with the summarize() function from the dplyr package. (1st Qu. and 3rd Qu. stand for first and third quartile.) After inspecting these summaries, look back to your boxplot, histogram, and density plot. Which plots show which summaries most clearly?\n\n\n# Summary statistics\n# Using summary() - convenient for computing many summaries in one command\n# Does not show the standard deviation\nabby %&gt;% \n    select(bing_pos) %&gt;% \n    summary()\n##     bing_pos     \n##  Min.   :0.0000  \n##  1st Qu.:0.1667  \n##  Median :0.3333  \n##  Mean   :0.3650  \n##  3rd Qu.:0.5000  \n##  Max.   :1.0000  \n##  NA's   :19\n\n# Using summarize() from dplyr\n# Note that we use %&gt;% to pipe the data into the summarize() function\n# We need to use na.rm = TRUE because there are missing values (NAs)\nabby %&gt;% \n    summarize(mean(bing_pos, na.rm = TRUE), median(bing_pos, na.rm = TRUE), sd(bing_pos, na.rm = TRUE))\n## # A tibble: 1 × 3\n##   `mean(bing_pos, na.rm = TRUE)` median(bing_pos, na.rm…¹ sd(bing_pos, na.rm =…²\n##                            &lt;dbl&gt;                    &lt;dbl&gt;                  &lt;dbl&gt;\n## 1                          0.365                    0.333                  0.279\n## # ℹ abbreviated names: ¹​`median(bing_pos, na.rm = TRUE)`,\n## #   ²​`sd(bing_pos, na.rm = TRUE)`\n\n\nWrite a good paragraph describing the information in the histogram (or density plot) by discussing shape, center, spread, and outliers. Incorporate the numerical summaries from part c.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#pause-math-box",
+    "href": "activities/02-foundations-univariate.html#pause-math-box",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Pause: Math box",
+    "text": "Pause: Math box\nBelow is an example of a “math box” which summarizes the formulas for some of the numerical summaries above. You are not required to memorize, nor will you be assessed on, any formulas presented in this or any future math box. They serve 3 purposes:\n\nTo emphasize that there’s “math” / a formal structure behind what we’re doing.\nTo provide students that plan to continue studying Statistics a glimpse into the formal statistical theory they’ll explore in later courses.\nTo make happy the students that are simply interested in math!\n\n\n\n\n\n\n\n\n\n\nMATH BOX: Univariate numerical summaries\n\n\n\nLet \\((y_1, y_2, ..., y_n)\\) be a sample of \\(n\\) data points.\nmean: \\[\\overline{y} = \\frac{y_1 + y_2 + \\cdots + y_n}{n} = \\frac{\\sum_{i=1}^n y_i}{n}\\]\nvariance: \\[\\text{var}(y) = \\frac{(y_1 - \\overline{y})^2 + (y_2 - \\overline{y})^2 + \\cdots + (y_n - \\overline{y})^2}{n - 1} = \\frac{\\sum_{i=1}^n (y_i - \\overline{y})^2}{n - 1}\\]\nstandard deviation: \\[\\text{sd}(y) = \\sqrt{\\text{var}(y)}\\]",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots",
+    "href": "activities/02-foundations-univariate.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 5: Box plots vs. histograms vs. density plots",
+    "text": "Exercise 5: Box plots vs. histograms vs. density plots\nWe took 3 different approaches to plotting the quantitative average course variable above. They all have pros and cons.\n\nWhat is one pro about the boxplot in comparison to the histogram and density plot?\nWhat is one con about the boxplot in comparison to the histogram and density plots?\nIn this example, which plot do you prefer and why?",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-6-returning-to-our-context-looking-ahead",
+    "href": "activities/02-foundations-univariate.html#exercise-6-returning-to-our-context-looking-ahead",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 6: Returning to our context, looking ahead",
+    "text": "Exercise 6: Returning to our context, looking ahead\nIn this activity, we explored data on Dear Abby question, with a focus on exploring a single variable at a time.\n\nIn big picture terms, what have we learned about Dear Abby questions?\nWhat further curiosities do you have about the data?",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-7-different-ways-to-think-about-data-visualization",
+    "href": "activities/02-foundations-univariate.html#exercise-7-different-ways-to-think-about-data-visualization",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 7: Different ways to think about data visualization",
+    "text": "Exercise 7: Different ways to think about data visualization\nIn working with and visualizing data, it’s important to keep in mind what a data point represents. It can reflect the experience of a real person. It might reflect the sentiment in a piece of art. It might reflect history. We’ve taken one very narrow and technical approach to data visualization. Check out the following examples, and write some notes about anything you find interesting.\n\nDear Data\nW.E.B. DuBois\nDecolonizing Data Viz",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-8-rendering-your-work",
+    "href": "activities/02-foundations-univariate.html#exercise-8-rendering-your-work",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 8: Rendering your work",
+    "text": "Exercise 8: Rendering your work\nSave this file, and then click the “Render” button in the menu bar for this pane (blue arrow pointing right). This will create an HTML file containing all of the directions, code, and responses from this activity. A preview of the HTML will appear in the browser.\n\nScroll through and inspect the document to see how your work was translated into this HTML format. Neat!\nClose the browser tab.\nGo to the “Background Jobs” pane in RStudio and click the Stop button to end the rendering process.\nNavigate to your “Activities” subfolder within your “STAT155” folder and locate the HTML file. You can open it again in your browser to double check.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#reflection",
+    "href": "activities/02-foundations-univariate.html#reflection",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Reflection",
+    "text": "Reflection\nGo to the top of this file and review the learning objectives for this lesson. Which objectives do you have a good handle on, are at least familiar with, or are struggling with? What feels challenging right now? What are some wins from the day?\n\nResponse: Put your response here.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#advice-make-an-r-code-cheat-sheet",
+    "href": "activities/02-foundations-univariate.html#advice-make-an-r-code-cheat-sheet",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Advice: make an R code “cheat sheet”!",
+    "text": "Advice: make an R code “cheat sheet”!\nYou will continue to pick up new R code and ideas. You’re highly encouraged to start tracking this in a cheat sheet (eg: in a Google doc). The cheat sheet will be a handy reference for you, and the act of making it will help deepen your understanding and retention.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-9-read-in-and-get-to-know-the-weather-data",
+    "href": "activities/02-foundations-univariate.html#exercise-9-read-in-and-get-to-know-the-weather-data",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 9: Read in and get to know the weather data",
+    "text": "Exercise 9: Read in and get to know the weather data\nDaily weather data are available for 3 locations in Perth, Australia.\n\nView the codebook here.\nComplete the code below to read in the data.\n\n\n# Replace the ??? with your own name for the weather data\n# Replace the ___ with the correct function\n??? &lt;- ___(\"https://mac-stat.github.io/data/weather_3_locations.csv\")\n## Error in parse(text = input): &lt;text&gt;:3:5: unexpected assignment\n## 2: # Replace the ___ with the correct function\n## 3: ??? &lt;-\n##        ^",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-10-exploring-the-data-structure",
+    "href": "activities/02-foundations-univariate.html#exercise-10-exploring-the-data-structure",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 10: Exploring the data structure",
+    "text": "Exercise 10: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\n\n# Find the dimensions of the data\n\nWhat does a case represent in this data?",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-11-exploring-rainfall",
+    "href": "activities/02-foundations-univariate.html#exercise-11-exploring-rainfall",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 11: Exploring rainfall",
+    "text": "Exercise 11: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about rainfall in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-12-exploring-temperature",
+    "href": "activities/02-foundations-univariate.html#exercise-12-exploring-temperature",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 12: Exploring temperature",
+    "text": "Exercise 12: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nIs this variable quantitative or categorical?\nCreate an appropriate visualization, and compute appropriate numerical summaries.\nWhat do you learn about high temperatures in Perth?\n\n\n# Visualization\n\n# Numerical summaries",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-13-customizing-challenge",
+    "href": "activities/02-foundations-univariate.html#exercise-13-customizing-challenge",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 13: Customizing! (CHALLENGE)",
+    "text": "Exercise 13: Customizing! (CHALLENGE)\nThough you will naturally absorb some RStudio code throughout the semester, being an effective statistical thinker and “programmer” does not require that we memorize all code. That would be impossible! In contrast, using the foundation you built today, do some digging online to learn how to customize your visualizations.\n\nFor the histogram below, add a title and more meaningful axis labels. Specifically, title the plot “Distribution of max temperatures in Perth”, change the x-axis label to “Maximum temperature” and y-axis label to “Number of days”. HINT: Do a Google search for something like “add axis labels ggplot”.\n\n\n# Add a title and axis labels\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n## Error: object 'weather' not found\n\n\nAdjust the code below in order to color the bars green. NOTE: Color can be an effective tool, but here it is simply gratuitous.\n\n\n# Make the bars green\nggplot(weather, aes(x = raintoday)) + \n    geom_bar()\n## Error: object 'weather' not found\n\n\nCheck out the ggplot2 cheat sheet. Try making some of the other kinds of univariate plots outlined there.\nWhat else would you like to change about your plot? Try it!",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-14-optional-challenge",
+    "href": "activities/02-foundations-univariate.html#exercise-14-optional-challenge",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 14: Optional challenge",
+    "text": "Exercise 14: Optional challenge\nAt the top of this activity, we searched for words related to some topics of interest (parents, marriage, money) and combined them into a single theme variable. It looked something like this:\n\nabby_new &lt;- abby %&gt;% \n  mutate(\n    parents = str_detect(question_only, \"mother|mama|mom|father|papa|dad\"),\n    marriage = str_detect(question_only, \"marriage|marry|married\"),\n    money = str_detect(question_only, \"money|finance\")\n  ) %&gt;%\n  rowwise() %&gt;%\n  mutate(\n    themes = c(\n      if (parents) \"parents\",\n      if (marriage) \"marriage\",\n      if (money) \"money\"\n    ) %&gt;% paste(collapse = \", \"),\n    themes = ifelse(themes == \"\", \"other\", themes)\n  ) %&gt;%\n  ungroup()\n\nCheck it out:\n\nhead(abby_new)\n## # A tibble: 6 × 12\n##    year month day   question_only     bing_pos afinn_overall afinn_pos afinn_neg\n##   &lt;dbl&gt; &lt;ord&gt; &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n## 1  2017 Aug   30    \"i moved to the …    0.75             14        16         2\n## 2  2017 Aug   30    \"under what circ…   NA                NA        NA        NA\n## 3  2017 Aug   28    \"i'm not a dog p…    0.333             5         5         0\n## 4  2017 Aug   28    \"my 62-year-old …    0.143           -11         8        19\n## 5  2017 Aug   27    \"i have a friend…    0.222             0         7         7\n## 6  2017 Aug   27    \"i have been sel…    0.333            -5         2         7\n## # ℹ 4 more variables: themes &lt;chr&gt;, parents &lt;lgl&gt;, marriage &lt;lgl&gt;, money &lt;lgl&gt;\n\n\nUnderstand the code!\n\nInside mutate() the line parents = str_detect(question_only, \"mother|mama|mom|father|papa|dad\") created a new variable called parents. This variable takes on TRUE or FALSE. Explain what TRUE and FALSE mean here.\nThe themes variable combines the information from the parents, marriage, and money variables. Check out the themes for the first 3 rows / data points. Convince yourself that you understand how it corresponds to the parents, marriage, and money variables.\n\nBeyond parents, marriage, and money, what are some other topics that might pop up in the Dear Abby letters (and that you’re interested in exploring)? Modify the code below to explore those topics! Update the themes variable accordingly.\n\n\nabby_new &lt;- abby %&gt;% \n  mutate(\n    parents = str_detect(question_only, \"mother|mama|mom|father|papa|dad\"),\n    marriage = str_detect(question_only, \"marriage|marry|married\"),\n    money = str_detect(question_only, \"money|finance\")\n  ) %&gt;%\n  rowwise() %&gt;%\n  mutate(\n    themes = c(\n      if (parents) \"parents\",\n      if (marriage) \"marriage\",\n      if (money) \"money\"\n    ) %&gt;% paste(collapse = \", \"),\n    themes = ifelse(themes == \"\", \"other\", themes)\n  ) %&gt;%\n  ungroup()\n\n# Check out the raw data\nhead(abby_new)\n## # A tibble: 6 × 12\n##    year month day   question_only     bing_pos afinn_overall afinn_pos afinn_neg\n##   &lt;dbl&gt; &lt;ord&gt; &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n## 1  2017 Aug   30    \"i moved to the …    0.75             14        16         2\n## 2  2017 Aug   30    \"under what circ…   NA                NA        NA        NA\n## 3  2017 Aug   28    \"i'm not a dog p…    0.333             5         5         0\n## 4  2017 Aug   28    \"my 62-year-old …    0.143           -11         8        19\n## 5  2017 Aug   27    \"i have a friend…    0.222             0         7         7\n## 6  2017 Aug   27    \"i have been sel…    0.333            -5         2         7\n## # ℹ 4 more variables: themes &lt;chr&gt;, parents &lt;lgl&gt;, marriage &lt;lgl&gt;, money &lt;lgl&gt;\n\n# Check out the number of letters belonging to each theme\nabby_new %&gt;% \n  count(themes)\n## # A tibble: 8 × 2\n##   themes                       n\n##   &lt;chr&gt;                    &lt;int&gt;\n## 1 marriage                    75\n## 2 marriage, money              5\n## 3 money                       21\n## 4 other                      234\n## 5 parents                    127\n## 6 parents, marriage           33\n## 7 parents, marriage, money     4\n## 8 parents, money              15",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-1-importing-and-getting-to-know-the-data-1",
+    "href": "activities/02-foundations-univariate.html#exercise-1-importing-and-getting-to-know-the-data-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 1: Importing and getting to know the data",
+    "text": "Exercise 1: Importing and getting to know the data\n\nNote how clicking the abby data causes both a popup pane and the command View(abby) to appear in the Console. In fact, the View() function is the underlying command that opens a dataset pane. (View() should always be entered in the Console and NOT your Quarto document.)\nEach row / case corresponds to a single question.\nColumns = variables\nTry out each function below. Identify what each function tells you about the abby data and note this in the ???:\n\n\n# First number = number of rows / cases\n# Second number = number of columns / variables\ndim(abby)\n## [1] 514   6\n\n# Number of rows (cases)\nnrow(abby)\n## [1] 514\n\n# Number of columns (variables)\nncol(abby)\n## [1] 6\n\n# View first few rows of the dataset (6 rows, by default)\nhead(abby)\n## # A tibble: 6 × 6\n##    year month day   question_only                                bing_pos themes\n##   &lt;dbl&gt; &lt;ord&gt; &lt;chr&gt; &lt;chr&gt;                                           &lt;dbl&gt; &lt;chr&gt; \n## 1  2017 Aug   30    \"i moved to the philippines five years ago.…    0.75  paren…\n## 2  2017 Aug   30    \"under what circumstances do you ask your a…   NA     money \n## 3  2017 Aug   28    \"i'm not a dog person. i'm not even an anim…    0.333 other \n## 4  2017 Aug   28    \"my 62-year-old father has recently started…    0.143 paren…\n## 5  2017 Aug   27    \"i have a friend, \\\"charlene,\\\" whom i met …    0.222 other \n## 6  2017 Aug   27    \"i have been selected to attend a symposium…    0.333 other\n\n# Get all column (variable) names\nnames(abby)\n## [1] \"year\"          \"month\"         \"day\"           \"question_only\"\n## [5] \"bing_pos\"      \"themes\"\n\n\nWe can display the first 10 rows with head(abby, n = 10).",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-2-preparing-to-summarize-and-visualize-the-data-1",
+    "href": "activities/02-foundations-univariate.html#exercise-2-preparing-to-summarize-and-visualize-the-data-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 2: Preparing to summarize and visualize the data",
+    "text": "Exercise 2: Preparing to summarize and visualize the data\n\nThe sentiment variables are afinn_overall, afinn_pos, afinn_neg, and bing_pos, and they are quantitative. The afinn variables don’t have units but we can still get a sense of the scale by remembering that each word gets a score between -5 and 5. The bing_pos variable doesn’t have units because it’s a fraction, but we know that it ranges from 0 to 1.\ncategorical\nAppropriate visualizations:\n\nsingle quantitative variable: boxplot, histogram, density plot\nsingle categorical variable: barplot",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-3-exploring-themes-in-the-letters-1",
+    "href": "activities/02-foundations-univariate.html#exercise-3-exploring-themes-in-the-letters-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 3: Exploring themes in the letters",
+    "text": "Exercise 3: Exploring themes in the letters\n\nExpectations about the plot will vary\n\n\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\n\n\n\n\n\n\n\n\n\nCounts in the table below match the barplot\n\n\n# Construct a table of counts\nabby %&gt;% \n    count(themes)\n## # A tibble: 8 × 2\n##   themes                       n\n##   &lt;chr&gt;                    &lt;int&gt;\n## 1 marriage                    75\n## 2 marriage, money              5\n## 3 money                       21\n## 4 other                      234\n## 5 parents                    127\n## 6 parents, marriage           33\n## 7 parents, marriage, money     4\n## 8 parents, money              15\n\n\nWhat do the plot layers do?\n\n\n# Just sets up the \"canvas\" of the plot with axis labels\nggplot(abby, aes(x = themes))\n\n\n\n\n\n\n\n\n\n# Adds the bars\nggplot(abby, aes(x = themes)) +\n    geom_bar()\n\n\n\n\n\n\n\n\n\n# Rotates the x axis labels\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\n\n\n\n\n\n\n\n\n\n# Changes the visual theme of the plot with a white background and removes gridlines\nggplot(abby, aes(x = themes)) +\n    geom_bar() +\n    theme_classic() +\n    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-4-exploring-sentiment-1",
+    "href": "activities/02-foundations-univariate.html#exercise-4-exploring-sentiment-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 4: Exploring sentiment",
+    "text": "Exercise 4: Exploring sentiment\n\n\n\n\nggplot(abby, aes(x = bing_pos)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\n\nWe replace geom_boxplot() with geom_histogram() and geom_density().\n\n\n# Histogram\nggplot(abby, aes(x = bing_pos)) +\n    geom_histogram()\n\n\n\n\n\n\n\n\n# Density plot\nggplot(abby, aes(x = bing_pos)) +\n    geom_density()\n\n\n\n\n\n\n\n\n\n\nBoxplot shows min, max, median, 1st and 3rd quartile easily. (It shows median, 1st and 3rd quartile directly as lines)\nHistogram and density plot show min and max but the mean and median aren’t shown directly–we have to roughly guess based on the peak of the distribution\n\n\n\n# Summary statistics\nabby %&gt;% \n    select(bing_pos) %&gt;% \n    summary()\n##     bing_pos     \n##  Min.   :0.0000  \n##  1st Qu.:0.1667  \n##  Median :0.3333  \n##  Mean   :0.3650  \n##  3rd Qu.:0.5000  \n##  Max.   :1.0000  \n##  NA's   :19\n\nabby %&gt;% \n    summarize(mean(bing_pos, na.rm = TRUE), median(bing_pos, na.rm = TRUE), sd(bing_pos, na.rm = TRUE))\n## # A tibble: 1 × 3\n##   `mean(bing_pos, na.rm = TRUE)` median(bing_pos, na.rm…¹ sd(bing_pos, na.rm =…²\n##                            &lt;dbl&gt;                    &lt;dbl&gt;                  &lt;dbl&gt;\n## 1                          0.365                    0.333                  0.279\n## # ℹ abbreviated names: ¹​`median(bing_pos, na.rm = TRUE)`,\n## #   ²​`sd(bing_pos, na.rm = TRUE)`\n\n\nThe distribution of sentiment scores is roughly tri-modal, ranging from 0 to 1. There’s a group of very negative letters (with roughly 0% of words being positive), a group of very positive letters (with roughly 100% of words being positive), and a group of mostly negative letters. The typical sentiment is around 0.34.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots-1",
+    "href": "activities/02-foundations-univariate.html#exercise-5-box-plots-vs.-histograms-vs.-density-plots-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 5: Box plots vs. histograms vs. density plots",
+    "text": "Exercise 5: Box plots vs. histograms vs. density plots\n\nBoxplots very clearly show key summary statistics like median, 1st and 3rd quartile\nBoxplots can oversimplify by not showing the shape of the distribution.",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-6-returning-to-our-context-looking-ahead-1",
+    "href": "activities/02-foundations-univariate.html#exercise-6-returning-to-our-context-looking-ahead-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 6: Returning to our context, looking ahead",
+    "text": "Exercise 6: Returning to our context, looking ahead\n\nAnswers will vary",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-9-read-in-and-get-to-know-the-weather-data-1",
+    "href": "activities/02-foundations-univariate.html#exercise-9-read-in-and-get-to-know-the-weather-data-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 9: Read in and get to know the weather data",
+    "text": "Exercise 9: Read in and get to know the weather data\n\nweather &lt;- read_csv(\"https://raw.githubusercontent.com/Mac-STAT/data/main/weather_3_locations.csv\")",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-10-exploring-the-data-structure-1",
+    "href": "activities/02-foundations-univariate.html#exercise-10-exploring-the-data-structure-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 10: Exploring the data structure",
+    "text": "Exercise 10: Exploring the data structure\nCheck out the basic features of the weather data.\n\n# Examine the first six cases\nhead(weather)\n## # A tibble: 6 × 24\n##   date       location  mintemp maxtemp rainfall evaporation sunshine windgustdir\n##   &lt;date&gt;     &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;      \n## 1 2020-01-01 Wollongo…    17.1    23.1        0          NA       NA SSW        \n## 2 2020-01-02 Wollongo…    17.7    24.2        0          NA       NA SSW        \n## 3 2020-01-03 Wollongo…    19.7    26.8        0          NA       NA NE         \n## 4 2020-01-04 Wollongo…    20.4    35.5        0          NA       NA SSW        \n## 5 2020-01-05 Wollongo…    19.8    21.4        0          NA       NA SSW        \n## 6 2020-01-06 Wollongo…    18.3    22.9        0          NA       NA NE         \n## # ℹ 16 more variables: windgustspeed &lt;dbl&gt;, winddir9am &lt;chr&gt;, winddir3pm &lt;chr&gt;,\n## #   windspeed9am &lt;dbl&gt;, windspeed3pm &lt;dbl&gt;, humidity9am &lt;dbl&gt;,\n## #   humidity3pm &lt;dbl&gt;, pressure9am &lt;dbl&gt;, pressure3pm &lt;dbl&gt;, cloud9am &lt;dbl&gt;,\n## #   cloud3pm &lt;dbl&gt;, temp9am &lt;dbl&gt;, temp3pm &lt;dbl&gt;, raintoday &lt;chr&gt;,\n## #   risk_mm &lt;dbl&gt;, raintomorrow &lt;chr&gt;\n\n# Find the dimensions of the data\ndim(weather)\n## [1] 2367   24\n\nA case represents a day of the year in a particular area (Hobart, Uluru, Wollongong as seen by the location variable).",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-11-exploring-rainfall-1",
+    "href": "activities/02-foundations-univariate.html#exercise-11-exploring-rainfall-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 11: Exploring rainfall",
+    "text": "Exercise 11: Exploring rainfall\nThe raintoday variable contains information about rainfall.\n\nraintoday is categorical (No, Yes)\nIt is more common to have no rain.\n\n\n# Visualization\nggplot(weather, aes(x = raintoday)) +\n    geom_bar()\n\n\n\n\n\n\n\n\n# Numerical summaries\nweather %&gt;% \n    count(raintoday)\n## # A tibble: 3 × 2\n##   raintoday     n\n##   &lt;chr&gt;     &lt;int&gt;\n## 1 No         1864\n## 2 Yes         446\n## 3 &lt;NA&gt;         57",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-12-exploring-temperature-1",
+    "href": "activities/02-foundations-univariate.html#exercise-12-exploring-temperature-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 12: Exploring temperature",
+    "text": "Exercise 12: Exploring temperature\nThe maxtemp variable contains information on the daily high temperature.\n\nmaxtemp is quantitative\nThe typical max temperature is around 23 degrees Celsius (with an average of 23.62 and a median of 22 degrees). The max temperatures ranged from 8.6 to 45.4 degrees. Finally, on the typical day, the max temp falls about 7.8 degrees from the mean. There are multiple modes in the distribution of max temperature—this likely reflects the different cities in the dataset.\n\n\n# Visualization\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram()\n\n\n\n\n\n\n\n\n# Numerical summaries\nsummary(weather$maxtemp)\n##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n##    8.60   18.10   22.00   23.62   27.40   45.40      34\n\n# There are missing values (NAs) in this variable, so we add\n# the na.rm = TRUE argument\nweather %&gt;% \n    summarize(sd(maxtemp, na.rm = TRUE))\n## # A tibble: 1 × 1\n##   `sd(maxtemp, na.rm = TRUE)`\n##                         &lt;dbl&gt;\n## 1                        7.80",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
+    ]
+  },
+  {
+    "objectID": "activities/02-foundations-univariate.html#exercise-13-customizing-challenge-1",
+    "href": "activities/02-foundations-univariate.html#exercise-13-customizing-challenge-1",
+    "title": "Univariate Visualization & Summaries",
+    "section": "Exercise 13: Customizing! (CHALLENGE)",
+    "text": "Exercise 13: Customizing! (CHALLENGE)\n\n\n\n\nggplot(weather, aes(x = maxtemp)) + \n    geom_histogram() + \n    labs(x = \"Maximum temperature\", y = \"Number of days\", title = \"Distribution of max temperatures in Perth\")\n\n\n\n\n\n\n\n\n\n\n\n\n# Make the bars green\nggplot(weather, aes(x = raintoday)) + \n    geom_bar(fill = \"green\")",
+    "crumbs": [
+      "Univariate Visualization & Summaries"
     ]
   },
   {
