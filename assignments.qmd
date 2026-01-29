@@ -8,4 +8,4 @@ Please review the [Practice Problems Policies](https://docs.google.com/document/
 
 **...due at 11:59 pm Central on Moodle!**
 
-
+- [Practice Sets 1](assignments/ps1.qmd), due 02/04

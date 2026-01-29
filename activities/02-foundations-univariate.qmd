@@ -251,9 +251,12 @@ b.  **Challenge:** Using the code for the barplot and boxplot as a guide, try to
 
 ```{r}
 # Histogram
+ggplot(abby, aes(x = bing_pos)) +
+    geom_histogram()
 
 # Density plot
-
+ggplot(abby, aes(x = bing_pos)) +
+    geom_density()
 ```
 
 c.  We can compute summary statistics (numerical summaries) for a quantitative variable using the `summary()` function or with the `summarize()` function from the `dplyr` package. (`1st Qu.` and `3rd Qu.` stand for first and third quartile.) After inspecting these summaries, look back to your boxplot, histogram, and density plot. Which plots show which summaries most clearly?
@@ -272,6 +275,7 @@ abby %>%
 abby %>% 
     summarize(mean(bing_pos, na.rm = TRUE), median(bing_pos, na.rm = TRUE), sd(bing_pos, na.rm = TRUE))
 ```
+
 
 d.  Write a good paragraph describing the information in the histogram (or density plot) by discussing shape, center, spread, and outliers. Incorporate the numerical summaries from part c.
 
