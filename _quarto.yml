@@ -56,7 +56,7 @@ website:
           - "!activities/08-mlr-intro.qmd"
           - "!activities/07-slr-cat-predictor.qmd"
           - "!activities/06-slr-transformations.qmd"
-          - "!activities/05-slr-model-eval.qmd"
+          - "activities/05-slr-model-eval.qmd"
           - "activities/03_04-slr-intro-formalization.qmd"
           - "activities/02-foundations-univariate.qmd"
           - "activities/01_foundations_welcome.qmd"

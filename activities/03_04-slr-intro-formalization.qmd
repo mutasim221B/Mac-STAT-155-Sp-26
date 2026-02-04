@@ -78,6 +78,10 @@ bikes <- read_csv("https://mac-stat.github.io/data/bikeshare.csv")
 
 Create a new code chunk to look at the first few rows of the data and learn how much data (in terms of cases and variables) we have.
 
+```{r}
+dim(bikes)
+head(bikes)
+```
 
 
 a. What does a case represent?
@@ -105,7 +109,7 @@ bikes %>%
     summarize(sd(riders_registered))
 ```
 
-- Write a good paragraph interpreting the pclot and numerical summaries after the class.
+- Write a good paragraph interpreting the plot and numerical summaries after the class.
 
 > Type your answer
 
@@ -160,6 +164,9 @@ YOUR_PLOT +
     geom_smooth(method = "lm", color = "red", se = FALSE) +
     geom_smooth(color = "blue", se = FALSE)
 ```
+
+
+
 
 What do you think "eval = TRUE/FALSE" doing here **{r eval = TRUE/FALSE}**?
 
@@ -240,6 +247,9 @@ bikes_sub <- bikes %>%
 
 Did it work? Check the dimensions of bikes and bikes_sub!
 
+```{r}
+dim(bikes_sub)
+```
 
 
 
@@ -265,11 +275,13 @@ coef(summary(bike_mod))
 ```
 
 a. Using the model summary output, complete the following model formula:    
-    E[riders_registered | temp_feel] = ___ + ___ * temp_feel
+    E[riders_registered | temp_feel] = -2486.41180 + 86.49251 * temp_feel
+    
+    
 
 b. **Intercept interpretation:** On days that feel like 0 degrees Fahrenheit, we can expect an average of -2486.41180 riders---a negative number of riders doesn't make sense! This results because of **extrapolation**---0 degrees is so far below the minimum temperature in the data. We only have information on the relationship between ridership and temperature in the ~40-100 degree range and have no idea what that relationship looks like outside that range.
 
-c. **Slope interpretation:** Every 1 degree **increase** in feeling temperature is associated with an **average** of about 86 **more** riders.
+c. **Slope interpretation:** Every 1 degree Fahrenheit **increase** in feeling temperature is associated with an **average** of about 86 **more** riders.
 
 
 ## Exercise 6: Predictions and residuals 
@@ -320,7 +332,7 @@ e. Are positive residuals above or below the trend line? When we have positive r
 
 f. For an 85 degree day, how many registered riders would we expect? Do you think it's a good idea to make this prediction? (Revisit the visualization and filtering we did in Exercises 3 and 4.) [Complete after the class!]
 
-
+> 
 
 ## Exercise 7: Changing temperature units (CHALLENGE) [Complete after the class!]
 
