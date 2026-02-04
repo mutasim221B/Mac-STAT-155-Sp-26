@@ -172,7 +172,10 @@ a. Construct two plots that will help us evaluate `mammal_model`:
 ```{r}
 # Scatterplot of brain weight (y) vs body weight (x)
 # Include a model trend line (i.e. a representation of mammal_model)
-
+ggplot(mammals, aes(x = body, y = brain)) + 
+    geom_point() + 
+    geom_smooth(method = "lm", se = FALSE) +
+    geom_smooth(se = FALSE, color = "red")
 ```
 
 ```{r}
@@ -271,7 +274,7 @@ In this exercise, we'll look at data from a synthetic dataset called Anscombe's 
 data(anscombe)
 
 # Look at the first few rows
-
+head(anscombe)
 ```
 
 The `anscombe` data is actually 4 datasets in one: `x1` and `y1` go together, and so forth. Examine the coefficient estimates (in the "Estimate" column of the "Coefficients:" part) and the "Multiple R-squared" value on the second to last line. What do you notice? How do these models compare?
@@ -620,11 +623,17 @@ ggplot(anscombe, aes(x = x4, y = y4)) +
 
 No solutions for these exercises. These require longer discussions, not discrete answers.
 
-## Exercise 9: Data & visualization drill
+## Exercise 10: Data & visualization drill
 
 a. 
 
 ```{r eval = TRUE}
+# STEP 1: Load packages and data, and examine data structure
+library(tidyverse)
+peaks <- read_csv("https://mac-stat.github.io/data/high_peaks.csv")
+head(peaks)
+dim(peaks)
+
 # How many hikes are in the data set?
 nrow(peaks)
 
@@ -680,7 +689,7 @@ c. observations
 
 
 
-## Exercise 10: Types of models
+## Exercise 11: Types of models
 
 a. Yes. Below is an example:
 
