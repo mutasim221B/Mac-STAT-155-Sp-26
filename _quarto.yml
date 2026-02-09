@@ -53,7 +53,7 @@ website:
           - "!activities/11+12-mlr-interaction.qmd"
           - "!activities/10-mlr-confounding.qmd"
           - "!activities/09-mlr-principles.qmd"
-          - "!activities/08-mlr-intro.qmd"
+          - "activities/08-mlr-intro.qmd"
           - "activities/07-slr-cat-predictor.qmd"
           - "activities/06-slr-transformations.qmd"
           - "activities/05-slr-model-eval.qmd"
