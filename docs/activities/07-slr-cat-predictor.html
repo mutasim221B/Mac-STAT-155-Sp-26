@@ -3872,6 +3872,10 @@ vertical-align: -.125em;
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
+    <a class="dropdown-item" href="../activities/09-mlr-principles.html">
+ <span class="dropdown-text">Multiple Linear Regression - Principles</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../activities/08-mlr-intro.html">
  <span class="dropdown-text">Multiple Linear Regression - Intro</span></a>
   </li>  
@@ -3973,8 +3977,11 @@ vertical-align: -.125em;
  <span class="menu-text">!activities/10-mlr-confounding.qmd</span>
   </li>
         <li class="sidebar-item">
- <span class="menu-text">!activities/09-mlr-principles.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../activities/09-mlr-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple Linear Regression - Principles</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/08-mlr-intro.html" class="sidebar-item-text sidebar-link">
@@ -4451,13 +4458,28 @@ vertical-align: -.125em;
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>diamond_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> cut, <span class="at">data =</span> diamonds)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarize the model</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(<span class="fu">summary</span>(diamond_mod))</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="do">##               Estimate Std. Error   t value     Pr(&gt;|t|)</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)  4358.7578   98.78795 44.122361 0.000000e+00</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="do">## cutGood      -429.8933  113.84940 -3.775982 1.595493e-04</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="do">## cutVery Good -376.9979  105.16422 -3.584849 3.375707e-04</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="do">## cutPremium    225.4999  104.39521  2.160060 3.077240e-02</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="do">## cutIdeal     -901.2158  102.41155 -8.799943 1.408406e-18</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(diamond_mod)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Call:</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="do">## lm(formula = price ~ cut, data = diamonds)</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Residuals:</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="do">##    Min     1Q Median     3Q    Max </span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  -4258  -2741  -1494   1360  15348 </span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Coefficients:</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="do">##              Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)   4358.76      98.79  44.122  &lt; 2e-16 ***</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="do">## cutGood       -429.89     113.85  -3.776 0.000160 ***</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="do">## cutVery Good  -377.00     105.16  -3.585 0.000338 ***</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="do">## cutPremium     225.50     104.40   2.160 0.030772 *  </span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="do">## cutIdeal      -901.22     102.41  -8.800  &lt; 2e-16 ***</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="do">## ---</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="do">## Residual standard error: 3964 on 53935 degrees of freedom</span></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="do">## Multiple R-squared:  0.01286,    Adjusted R-squared:  0.01279 </span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="do">## F-statistic: 175.7 on 4 and 53935 DF,  p-value: &lt; 2.2e-16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="a">
 <li>Even though we specified a single predictor variable in the model, we are seeing 4 coefficient estimates–why do you think this is the case?</li>

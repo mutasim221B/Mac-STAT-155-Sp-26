@@ -285,7 +285,7 @@ coef(summary(penguin_mod))
 
 
 a. In the `lm()` function, how did we communicate that we wanted to model `flipper_len` by both `bill_len` and `species`?
-bill_len + species
+> bill_len + species
 
 b. MLR model formula:    
 

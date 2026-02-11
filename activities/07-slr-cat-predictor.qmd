@@ -291,7 +291,7 @@ Using a single binary predictor like the `cutFair` indicator variable is useful 
 diamond_mod <- lm(price ~ cut, data = diamonds)
 
 # Summarize the model
-coef(summary(diamond_mod))
+summary(diamond_mod)
 ```
 
 a. Even though we specified a single predictor variable in the model, we are seeing 4 coefficient estimates--why do you think this is the case?
