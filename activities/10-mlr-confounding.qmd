@@ -33,7 +33,7 @@ knitr::opts_chunk$set(
 
 # Notes
 
-- [Slides](https://docs.google.com/presentation/d/1ZCcWJaumyh_BohkXlsYZwHvPGpfQF8RrH5sc2sgwUf4/edit?usp=sharing) with comments on Quiz 1
+
 - You can download a template file to work with [here](../activity_templates/10_mlr_confounding.qmd).
 - **File organization:** Save this file in the "Activities" subfolder of your "STAT155" folder.
 
@@ -100,7 +100,7 @@ Synthesis:
 
 
 
-> Live-board!
+> Association is NOT Causation: Live-board! 
 
 
 

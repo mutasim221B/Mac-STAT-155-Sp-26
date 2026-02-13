@@ -79,7 +79,6 @@ To this end, we'll build various **multiple linear regression** models of `rides
 ```{r}
 # Check out the data
 head(bikes)
-min(bikes$temp_feel)
 ```
 
 
@@ -164,7 +163,7 @@ bikes %>%
   geom_boxplot()
 ```
 
-
+> 
 
 ## Exercise 5: follow-up
 
