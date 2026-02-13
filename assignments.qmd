@@ -10,3 +10,4 @@ Please review the [Practice Problems Policies](https://docs.google.com/document/
 
 - [Practice Sets 1](assignments/ps1.qmd), due 02/04
 - [Practice Sets 2](assignments/ps2.qmd), due 02/09
+- [Practice Sets 3](assignments/ps3.qmd), due 02/23

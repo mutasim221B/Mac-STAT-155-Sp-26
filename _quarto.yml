@@ -51,7 +51,7 @@ website:
           - "!activities/15+16-Logistic-Regression-I.qmd"
           - "!activities/13+14-mlr-model-building.qmd"
           - "!activities/11+12-mlr-interaction.qmd"
-          - "!activities/10-mlr-confounding.qmd"
+          - "activities/10-mlr-confounding.qmd"
           - "activities/09-mlr-principles.qmd"
           - "activities/08-mlr-intro.qmd"
           - "activities/07-slr-cat-predictor.qmd"
