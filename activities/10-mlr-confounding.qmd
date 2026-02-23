@@ -165,6 +165,7 @@ arrows(x0 = 1.7, y0 = 1, x1 = 4.5, y1 = 1, angle = 25, lwd = 4)
 Name at least 2 potential confounders.
 
 
+
 ## Exercise 2b: How & why do confounders bias results?
 
 Unaccounted-for confounders are often a source of **bias** in our models, meaning that when we ignore them, we often over- or under-estimate the true underlying relationship between a predictor and response variable. To explore why this is important, let's first look at how our focal predictor `marital` is associated with our response variable, `wage`:
