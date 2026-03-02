@@ -9,7 +9,7 @@ format:
 
 
 
-You can download the .qmd file for this activity [here](../activity_templates/13+14-mlr-model-building.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Fall-25/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+You can download the .qmd file for this activity [here](../activity_templates/13+14-mlr-model-building.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
 
 
 
@@ -150,7 +150,7 @@ model              predictors
 `penguin_model_1`  `flipper_len`
 `penguin_model_4`  `body_mass`
 `penguin_model_5`  `flipper_len + body_mass`
- 
+
  
 ```{r}
 summary(penguin_model_1)$r.squared

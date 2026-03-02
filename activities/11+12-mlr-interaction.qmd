@@ -9,7 +9,7 @@ format:
 
 
 
-You can download the .qmd file for this activity [here](../activity_templates/11+12-mlr-interaction.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Fall-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+You can download the .qmd file for this activity [here](../activity_templates/11+12-mlr-interaction.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
 
 
 
@@ -270,6 +270,7 @@ ggplot(cps, aes(y = wage, x = hours, color = industry)) +
 
 
 
+
 # 12. MLR Interaction: Practice Notes
 
 # Exercises
@@ -319,13 +320,13 @@ head(campaigns)
 b. Question 2 (a) is a bit more specific than Question 1. Translate this question into a statistical one that can be answered using a simple linear regression model. Write out the model statement in $E[Y | X] = ...$ notation that would answer this question, and note which regression coefficient you would interpret to provide you with an answer.
 
 $$
-E[___ | ___] = ...
+
 $$
 
 c. Question 2 (b) is also specific, and builds on Question 2 (a). Translate this question into a statistical one that can be answered using a *multiple* linear regression model. Write out the model statement in $E[Y | X] = ...$ notation that would answer this question, and note which regression coefficient you would interpret to provide you with an answer.
 
 $$
-E[___ | ___] = ...
+
 $$
 
 
@@ -366,13 +367,13 @@ a. Fit the regression model you wrote out in Exercise 1 (c). *Report* (do not in
 lm(data = campaigns, votes ~ spending*incumbent)
 ```
 
-> (Intercept):
+> (Intercept): 690.5 
 
-> incumbentYes:
+> incumbentYes:4813.9
 
-> spending:
+> spending: 209.7
 
-> incumbentYes:spending:
+> incumbentYes:spending: -125.9
 
 b. Using the coefficient estimates from part (a), write out *two separate model statements*, one for incumbents and one for challengers. Combine terms (using algebra) when you can! 
 
@@ -390,6 +391,8 @@ $$
 
 c. Interpret the coefficient for `incumbent` in your interaction model, in context. *Make sure to use non-causal language, include units, and talk about averages rather than individual cases.* Is this coefficient scientifically meaningful?
 
+
+
 d. When interpreting an interaction coefficient where one of the variables interacting is quantitative and one is categorical, it is often convenient to do so in separate sentences: interpret the slope for each category separately! 
 
 Interpret the coefficient for the interaction term in your model, in context. *Make sure to use non-causal language, include units, and talk about averages rather than individual cases.*
@@ -398,6 +401,7 @@ e. Based on your interpretation in part (d), and the visualization you made incl
 
 
 
+'
 ## Exercise 4: Interactions between two categorical variables
 
 Let's return to our data on bike ridership. Suppose we are interested in the relationship between daily ridership (our response variable) and whether a user is a casual or registered rider **and** whether the day falls on a weekend. First, we need to create a binary variable indicating whether a user is a casual or registered rider.
