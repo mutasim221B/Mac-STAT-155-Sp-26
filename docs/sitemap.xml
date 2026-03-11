@@ -10,59 +10,63 @@
   </url>
   <url>
     <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/assignments.html</loc>
-    <lastmod>2026-03-02T17:55:44.019Z</lastmod>
+    <lastmod>2026-03-11T14:18:50.746Z</lastmod>
   </url>
   <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/13+14-mlr-model-building.html</loc>
-    <lastmod>2026-03-02T15:22:34.508Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/10-mlr-confounding.html</loc>
-    <lastmod>2026-02-13T17:30:48.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/08-mlr-intro.html</loc>
-    <lastmod>2026-02-09T17:53:52.669Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/06-slr-transformations.html</loc>
-    <lastmod>2026-02-05T20:23:13.690Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/03_04-slr-intro-formalization.html</loc>
-    <lastmod>2026-01-30T17:47:44.620Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/01_foundations_welcome.html</loc>
-    <lastmod>2026-01-27T12:02:46.119Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/R_Resources.html</loc>
-    <lastmod>2026-01-19T19:36:21.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/02-foundations-univariate.html</loc>
-    <lastmod>2026-01-28T18:04:30.588Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/05-slr-model-eval.html</loc>
-    <lastmod>2026-02-04T18:08:14.449Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/07-slr-cat-predictor.html</loc>
-    <lastmod>2026-02-09T15:27:22.655Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/09-mlr-principles.html</loc>
-    <lastmod>2026-02-13T15:30:05.261Z</lastmod>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/15+16-Logistic-Regression-I.html</loc>
+    <lastmod>2026-03-11T14:07:29.407Z</lastmod>
   </url>
   <url>
     <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/11+12-mlr-interaction.html</loc>
     <lastmod>2026-03-02T15:22:34.460Z</lastmod>
   </url>
   <url>
-    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/15+16-Logistic-Regression-I.html</loc>
-    <lastmod>2026-03-04T15:25:49.306Z</lastmod>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/09-mlr-principles.html</loc>
+    <lastmod>2026-02-13T15:30:05.261Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/07-slr-cat-predictor.html</loc>
+    <lastmod>2026-02-09T15:27:22.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/05-slr-model-eval.html</loc>
+    <lastmod>2026-02-04T18:08:14.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/02-foundations-univariate.html</loc>
+    <lastmod>2026-01-28T18:04:30.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/R_Resources.html</loc>
+    <lastmod>2026-01-19T19:36:21.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/01_foundations_welcome.html</loc>
+    <lastmod>2026-01-27T12:02:46.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/03_04-slr-intro-formalization.html</loc>
+    <lastmod>2026-01-30T17:47:44.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/06-slr-transformations.html</loc>
+    <lastmod>2026-02-05T20:23:13.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/08-mlr-intro.html</loc>
+    <lastmod>2026-02-09T17:53:52.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/10-mlr-confounding.html</loc>
+    <lastmod>2026-02-13T17:30:48.869Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/13+14-mlr-model-building.html</loc>
+    <lastmod>2026-03-02T15:22:34.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/activities/17-logistic-regression-II.html</loc>
+    <lastmod>2026-03-11T14:19:01.741Z</lastmod>
   </url>
   <url>
     <loc>https://mutasim221B.github.io/Mac-STAT-155-Sp-26/index.html</loc>
