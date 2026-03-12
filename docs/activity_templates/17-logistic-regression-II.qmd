@@ -72,11 +72,18 @@ Our research question is: **does an applicant's inferred gender and race have an
 
 ```{r}
 library(tidyverse)
-library(ggmosaic)
+library(ggplot2)
 
 resume <- read_csv("https://mac-stat.github.io/data/resume.csv")
-str(resume)
+head(resume)
 
+# Preparing data for visualizations
+resume2 <- resume %>%
+  mutate(
+    gender = factor(gender, levels = c("f", "m")),
+    race = factor(race),
+    received_callback = factor(received_callback, levels = c(0, 1))
+  )
 ```
 
 ## Exercise 1: Graphical and numerical summaries
@@ -84,35 +91,52 @@ str(resume)
 Our research question involves three categorical variables: `received_callback` (1 = yes, 0 = no), `gender` (f = female, m = male), and `race` (Black, White). Let's start by creating a mosaic plot to visually compare inferred binary gender and callbacks:
 
 ```{r graphical-summary-two-categorical-variables}
-# create mosaic plot of callback vs gender
-ggplot(resume) + 
-    geom_mosaic(aes(x = product(gender), fill = received_callback)) +
-    scale_fill_manual("Received Callback? \n(1 = yes, 0 = no)", values = c("lightblue", "steelblue")) + 
-    labs(x = "Inferred Binary Gender (f = female, m = male)", y = "Received Callback? (1 = yes, 0 = no)")
+
+
+ggplot(resume2, aes(x = gender, fill = received_callback)) +
+  geom_bar(position = "fill") +
+  scale_fill_manual(
+    name = "Received Callback?\n(1 = yes, 0 = no)",
+    values = c("0" = "lightblue", "1" = "steelblue")
+  ) +
+  labs(
+    x = "Inferred Binary Gender (f = female, m = male)",
+    y = "Proportion"
+  )
 ```
 
 
 In this activity, we're also interested in looking at the relationship between inferred race and callbacks. One way we can add a third variable to a plot is to use the `facet_grid` function, particularly when that third variable is categorical. Let's try that now:
 
 ```{r graphical-summary-three-variables}
-# create mosaic plot of callback vs gender and race
-ggplot(resume) + 
-    geom_mosaic(aes(x = product(gender), fill = received_callback)) +
-    facet_grid(. ~ race) +
-    scale_fill_manual("Received Callback? \n(1 = yes, 0 = no)", values = c("lightblue", "steelblue")) + 
-    labs(x = "Inferred Binary Gender (f = female, m = male)", y = "Received Callback? (1 = yes, 0 = no)")
+ggplot(resume2, aes(x = gender, fill = received_callback)) +
+  geom_bar(position = "fill") +
+  facet_grid(. ~ race) +
+  scale_fill_manual(
+    "Received Callback? \n(1 = yes, 0 = no)",
+    values = c("0" = "lightblue", "1" = "steelblue")
+  ) +
+  labs(
+    x = "Inferred Binary Gender (f = female, m = male)",
+    y = "Proportion"
+  )
 ```
 
 
 Here's another way of looking at the relationship between these three variables, switching the placement of `gender` and `race` in the mosaic plot:
 
 ```{r graphical-summary-three-variables-version2}
-# create mosaic plot of callback vs gender and race
-ggplot(resume) + 
-    geom_mosaic(aes(x = product(received_callback, race), fill = received_callback)) +
-    facet_grid(. ~ gender) +
-    scale_fill_manual("Received Callback? \n(1 = yes, 0 = no)", values = c("lightblue", "steelblue")) + 
-    labs(x = "Inferred Race", y = "Received Callback? (1 = yes, 0 = no)")
+ggplot(resume2, aes(x = race, fill = received_callback)) +
+  geom_bar(position = "fill") +
+  facet_grid(. ~ gender) +
+  scale_fill_manual(
+    "Received Callback? \n(1 = yes, 0 = no)",
+    values = c("0" = "lightblue", "1" = "steelblue")
+  ) +
+  labs(
+    x = "Inferred Race",
+    y = "Proportion"
+  )
 ```
 
 When we are comparing three categorical variables, a useful numerical summary is to calculate relative frequencies/proportions of cases falling into each category of the outcome variable, conditional on which categories of the explanatory variables they fall into. Run this code chunk to calculate the conditional proportion of resumes that did nor did not receive a callback, given the inferred gender and race of the applicant:
@@ -357,8 +381,290 @@ c. Imagine that we are a career center on a college campus and we want to use th
 
 \
 \
+
+# Additional exercises {-}
+
+
+Build 2 models that you'll use below, the first of which you explored in the previous activity:
+
+```{r}
+# Load data
+climbers <- read.csv("https://mac-stat.github.io/data/climbers_sub.csv") %>% 
+  select(peak_name, success, age, oxygen_used, year, season)
+
+# Build 2 models
+climb_model_1 <- glm(success ~ age, climbers, family = "binomial")
+climb_model_2 <- glm(success ~ age + oxygen_used, climbers, family = "binomial")
+```
+
+
+## Exercise 7: `climb_model_2`
+
+a. `climb_model_1` uses only `age` as a predictor:
+
+```{r}
+# Plot climb_model_1
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial")) +
+  labs(y = "probability of success")
+```
+
+In contrast, the *multiple* logistic regression model `climb_model_2` includes *2* predictors of `success`: `age` *and* `oxygen_used`. In comparison to the above plot of `climb_model_1`, what do you anticipate `climb_model_2` looking like?
+
+
+b. Check your intuition! Summarize, in words, what you learn about the relationship of success with age and oxygen use from the below plots.
+
+```{r}
+# Plot climb_model_2
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age, color = oxygen_used)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial")) +
+  labs(y = "probability of success")
+```
+
+```{r}
+# Just for fun zoom out!
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age, color = oxygen_used)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial"),
+              fullrange = TRUE) +
+  labs(y = "probability of success") + 
+  lims(x = c(-300, 400))
+```
+
+c. The estimated model formula is:
+
+log(odds of `success` | `age`, `oxygen_used`) = -0.520 - 0.022 `age` + 2.896 `oxygen_usedTRUE`
+
+```{r}
+# Get the model summary table
+coef(summary(climb_model_2))
+
+# Exponentiated coefficients
+exp(coef(climb_model_2))
+```
+
+Interpret the `age` coefficient on the odds scale. Don't forget to "control for..."!
+
+
+d. Interpret the `oxygen_usedTRUE` coefficient on the odds scale. Don't forget to "control for..."!
+
+
+
+
+## Exercise 8: Model evaluation using plots
+
+Recall our 2 models of climbing success:
+
+model            predictors
+---------------- -----------------------
+`climb_model_1`  age
+`climb_model_2`  age, oxygen_used
+    
+Let's compare the quality of these models.
+To begin, the code below calculates the probability of success for every climber in our dataset using `climb_model_1`, and stores it as the `.fitted` variable:
+
+```{r}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  head()
+```
+
+A *visual* way to evaluate the quality of our model is to compare the probability of success it assigns to climbers that were and were not actually successful:
+
+```{r}
+# Compare the climb_model_1 probability of success calculations for those that were & weren't successful
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot()
+```
+
+Similarly, check out the probability calculations using `climb_model_2`:
+
+```{r}
+# Compare the climb_model_2 probability of success calculations for those that were & weren't successful
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot()
+```
+
+
+a. Summarize what you learn from the plots about the ability of `climb_model_1` and `climb_model_2` to differentiate between those who were and were not actually successful. Comment on which model seems better, and why.
+
+b. Focus on the plot for `climb_model_2`. Sometimes we may need to go beyond the probability calculations and make a *binary* prediction about whether a climber will succeed or fail. Suppose we used a 0.5 probability threshold: If the probability of success exceeds 0.5, then predict success. Otherwise, predict failure.
+In pictures:
+
+```{r}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.5, color = "red")
+```
+
+Discuss:
+
+- What do you think of the 0.5 threshold? Would it lead to good predictions? Would it do better at predicting when climbers will succeed or when they'll fail?
+
+- If we used the 0.5 threshold, what would the specificity be: less than 25%, between 25% & 50%, between 50% & 75%, or above 75%? Answer this using only the plot.
+
+- If we used the 0.5 threshold, what would the sensitivity be: less than 25%, between 25% & 50%, between 50% & 75%, or above 75%? Answer this using only the plot.
+
+- If you don't like the 0.5 threshold, what do you think would be a better option? Why?
+
+
+
+
+
+## Exercise 9: Model evaluation using evaluation metrics
+
+Let's explore using a probability threshold of 0.25 (25%) to make a binary prediction of success / failure for each climber in our dataset:
+
+- If a model's probability of success is greater than or equal to 25%, we'll predict that they'll succeed.
+- If the probability is below 25%, we'll predict that they'll fail.
+
+We can visualize this threshold on our predicted probability boxplots for our 2 models:
+
+```{r}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.25, color = "red")
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.25, color = "red")
+```
+
+To evaluate the quality of the resulting predictions, we essentially want to count up how many climbers fell on the "correct" side of the threshold, both overall and within both groups (successful and unsuccessful climbers).
+Let's start with `climb_model_1`.
+Using the 0.25 threshold, this model predicted success for the first 6 climbers -- 5 of these predictions were correct (5 of the 6 were actually successful) and 1 was wrong:
+
+```{r}
+threshold <- 0.25
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  mutate(predictSuccess = .fitted >= threshold) %>% 
+  select(success, age, oxygen_used, .fitted, predictSuccess) %>% 
+  head()
+```
+
+But that's just the first 6 climbers!
+We can build a `tabyl()` to compare the observed `success` to the `predictSuccess` for *all* climbers in our dataset:
+
+```{r}
+# Rows = actual / observed success (FALSE or TRUE)
+# Columns = predicted success (FALSE or TRUE)
+library(janitor)
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  mutate(predictSuccess = .fitted >= threshold) %>% 
+  tabyl(success, predictSuccess) %>%
+  adorn_totals(c("row", "col"))
+```
+
+a. Use the confusion matrix to prove that `climb_model_1` has an **overall accuracy** rate of 40%.
+That is:
+
+P(Predict Y Correctly) = 0.40
+
+HINT: Divide the total number of correct predictions by the total number of climbers.    
+
+```{r}
+
+```
+
+
+b. `climb_model_1` has a **sensitivity** (aka **true positive rate**) of 99%, hence a **false negative rate** of 1%
+
+- Sensitivity: P(Predict Y = success | Actual Y = success) = 0.99   
+    Among (conditioned on) successful climbers, the probability of the model correctly predicting success is 99%.
+
+- False negative rate: P(Predict Y = failure | Actual Y = success) = 0.01
+    Among (conditioned on) successful climbers, the probability of the model INcorrectly predicting failure is 1%.
+
+**Prove** these calculations using the confusion matrix:
+
+```{r}
+
+```
+
+
+c. `climb_model_1` has a **specificity** (aka **true negative rate**) of only 2%, hence a **false positive rate** of 98%:
+
+- Specificity: P(Predict Y = failure | Actual Y = failure) = 0.02   
+    Among (conditioned on) unsuccessful climbers, the probability of the model correctly predicting failure is only 2%.
+
+- False positive rate: P(Predict Y = success | Actual Y = failure) = 0.98
+    Among (conditioned on) unsuccessful climbers, the probability of the model INcorrectly predicting success is 98%.
+
+**Prove** these calculations using the confusion matrix:
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+## Exercise 10: More confusion matrices
+
+Obtain the confusion matrix, overall accuracy, sensitivity (true positive rate), and specificity (true negative rate) for `climb_model_2` (with a 0.25 probability threshold).
+NOTE: The correct metrics are outlined in the next exercise if you want to check your work.    
+
+```{r}
+# Confusion matrix
+
+# Overall accuracy
+
+# Sensitivity
+
+# Specificity
+
+```
+
+
+
+
+## Exercise 11: Model comparison
+
+We've now considered 2 models of climbing success, and evaluated their predictive performance using a 0.25 probability threshold:
+
+model  predictors         overall  sensitivity  specificity
+------ ----------------- -------- ------------ ------------
+1      age                   0.40         0.99         0.02
+2      age, oxygen_used      0.75         0.69         0.79
+
+
+a. Fill in the blanks with the model number.
+
+- Model ___ had the higher *overall* accuracy.    
+
+- Model ___ was better at predicting when a climber *would* succeed.    
+- Model ___ was better at predicting when a climber would *not* succeed.   
+
+
+b. Imagine that *you* are planning an expedition.
+Consider the consequences of incorrectly predicting whether or not you will be successful.
+What are the consequences of a false negative?
+What about a false positive?
+Which one is worse?
+With that in mind, which climbing model do you prefer?
+
+
 \
 \
+\
+
 
 
 # Solutions
@@ -581,6 +887,198 @@ c. Imagine that we are a career center on a college campus and we want to use th
     - False Positives (predicting callback, but actually didn't get callback): this would be a disappointment for the student, thinking they were going to get a callback but they ended up not getting one.
 
 
+## Exercise 7: `climb_model_2`
 
+```{r eval = TRUE}
+# Load data
+climbers <- read.csv("https://mac-stat.github.io/data/climbers_sub.csv") %>% 
+  select(peak_name, success, age, oxygen_used, year, season)
+
+# Build 2 models
+climb_model_1 <- glm(success ~ age, climbers, family = "binomial")
+climb_model_2 <- glm(success ~ age + oxygen_used, climbers, family = "binomial")
+```
+
+
+a. We should expect this to turn into 2 curves, 1 for each category of `oxygen_used`.
+
+```{r eval = TRUE}
+# Plot climb_model_1
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial")) +
+  labs(y = "probability of success")
+```
+
+b. The probability of success decreases with age, both among climbers that use oxygen and among those that don't.
+Further, at any age, the probability of success is higher among people that use oxygen.
+
+```{r eval = TRUE}
+# Plot climb_model_2
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age, color = oxygen_used)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial")) +
+  labs(y = "probability of success")
+
+# Just for fun zoom out!
+climbers %>% 
+  ggplot(aes(y = as.numeric(success), x = age, color = oxygen_used)) + 
+  geom_smooth(method = "glm", se = FALSE, method.args = list(family = "binomial"),
+              fullrange = TRUE) +
+  labs(y = "probability of success") + 
+  lims(x = c(-300, 400))
+```
+
+
+c. **When controlling for oxygen use**, the odds of success are 97.8% as high (2.2% lower) for every additional year in age, on average.
+
+
+```{r eval = TRUE}
+# Get the model summary table
+coef(summary(climb_model_2))
+
+# Exponentiated coefficients
+exp(coef(climb_model_2))
+```
+
+
+d. **When controlling for age**, the odds of success are roughly 18 times higher for people that use oxygen. 
+
+\
+\
+
+
+## Exercise 8: Model evaluation using plots
+
+```{r eval = TRUE}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  head()
+
+# Compare the climb_model_1 probability of success calculations for those that were & weren't successful
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot()
+
+# Compare the climb_model_2 probability of success calculations for those that were & weren't successful
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot()
+```
+
+a. `climb_model_2` does a better job differentiating between those who were and were not actually successful -- it tends to predict higher probabilities of success for those that were actually successful.
+In contrast, `climb_model_1` assigns pretty similar probabilities of success for both people that were actually successful and those that weren't.
+
+b. 
+
+```{r eval = TRUE}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.5, color = "red")
+```
+
+- The 0.5 threshold would be bad. It would do a good job of predicting when climbers will fail, but will often predict failure for people that eventually succeed (i.e. it would have a high false negative rate).
+
+- The specificity be above 75% -- the entire box is below the threshold, meaning at least 75% of failed climbers had predicted probability of success below 0.5.
+
+- The sensitivity would be between 50% & 75% -- more than half of successful climbers but less than 75% had predicted probability of success above 0.5.
+
+- 0.25ish better separates the 2 groups: Most climbers that failed had a probability prediction below 0.25, and most climbers that succeeded had a probability prediction above 0.25.
+
+
+
+
+
+## Exercise 9: Model evaluation using evaluation metrics
+
+```{r eval = TRUE}
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.25, color = "red")
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  ggplot(aes(x = success, y = .fitted)) +
+  geom_boxplot() + 
+  geom_hline(yintercept = 0.25, color = "red")
+
+threshold <- 0.25
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  mutate(predictSuccess = .fitted >= threshold) %>% 
+  select(success, age, oxygen_used, .fitted, predictSuccess) %>% 
+  head()
+
+# Rows = actual / observed success (FALSE or TRUE)
+# Columns = predicted success (FALSE or TRUE)
+library(janitor)
+climbers %>% 
+  mutate(.fitted = predict(climb_model_1, newdata = ., type = "response")) %>% 
+  mutate(predictSuccess = .fitted >= threshold) %>% 
+  tabyl(success, predictSuccess) %>%
+  adorn_totals(c("row", "col"))
+```
+
+
+```{r eval = TRUE}
+# a
+# Total number of correct predictions / total number of climbers
+(25 + 800) / 2076
+
+# b
+# Number of successful climbers that were predicted to be successful / total number of successful climbers
+800 / 807
+
+# c
+# Number of unsuccessful climbers that were predicted to be unsuccessful / total number of unsuccessful climbers
+25 / 1269
+```
+
+
+## Exercise 10: More confusion matrices
+
+
+```{r eval = TRUE}
+# Confusion matrix
+climbers %>% 
+  mutate(.fitted = predict(climb_model_2, newdata = ., type = "response")) %>% 
+  mutate(predictSuccess = .fitted >= threshold) %>% 
+  tabyl(success, predictSuccess) %>%
+  adorn_totals(c("row", "col"))
+
+# Overall accuracy
+(1008 + 558) / 2076
+
+# Sensitivity
+558 / 807
+
+# Specificity
+1008 / 1269
+```
+    
+    
+
+## Exercise 11: Model comparison
+
+model  predictors         overall  sensitivity  specificity
+------ ----------------- -------- ------------ ------------
+1      age                   0.40         0.99         0.02
+2      age, oxygen_used      0.75         0.69         0.79
+
+
+a. 
+
+- Model 2 had the higher *overall* accuracy.    
+- Model 1 was better at predicting when a climber *would* succeed. (it had higher *sensitivity*)    
+- Model 2 was better at predicting when a climber would *not* succeed. (it had higher *specificity*)   
+
+
+b. In my opinion, specificity is more important.
+Climbing can be dangerous and so maybe it's better to anticipate when you might *not* succeed.
 
 
