@@ -4333,9 +4333,9 @@ window.Quarto = {
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Preparing data for visualizations</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>resume2 <span class="ot">&lt;-</span> resume <span class="sc">%&gt;%</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">gender =</span> <span class="fu">factor</span>(gender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;f&quot;</span>, <span class="st">&quot;m&quot;</span>)),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">gender =</span> <span class="fu">factor</span>(gender),</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">race =</span> <span class="fu">factor</span>(race),</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">received_callback =</span> <span class="fu">factor</span>(received_callback, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">received_callback =</span> <span class="fu">factor</span>(received_callback)</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="exercise-1-graphical-and-numerical-summaries" class="level2">
@@ -4449,12 +4449,22 @@ window.Quarto = {
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  0.07083706  0.88070675  1.55206159</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Write an interpretation of each of the exponentiated coefficients in your logistic regression model.</p>
+<ul>
+<li>exp(Intercept): We estimate the odds of getting a callback among those inferred to be black females is only 0.07, meaning that the chance of getting a callback is 0.07 times as large as the chance of not getting a callback (or, inversely, the chance of <em>not</em> getting a callback is 1/0.07 = 14.29) times greater than the chance of getting a callback).</li>
+<li>exp(genderm): Comparing applicants of the same inferred race, we estimate that those inferred to be male have an odds of getting a callback that is 0.88 times as high as (or, equivalently, 12% lower than) the odds of getting a callback for those inferred to be female.</li>
+<li>exp(racewhite): We estimate that the odds of getting a callback are 1.55 times higher for applicants whose race was inferred to be white as compared to those who were inferred to be black but the same gender.</li>
+</ul>
 </section>
 <section id="exercise-3-interaction-terms" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-3-interaction-terms">Exercise 3: Interaction terms</h2>
 <ol type="a">
-<li><p>Do you think it would make sense to add an interaction term (between gender and race) to our logistic regression model? Why/why not?</p></li>
-<li><p>Let’s try adding an interaction between gender and race. Update the code below to fit this new interaction model.</p></li>
+<li>Do you think it would make sense to add an interaction term (between gender and race) to our logistic regression model? Why/why not?</li>
+</ol>
+<blockquote class="blockquote">
+<p>Including an interaction term in our model would allow us to investigate whether the effect of race on getting a callback depends on your gender or, vice versa, if the effect of gender on getting a callback depends on a race. In other words, we could ask questions like: is there more of a discrepancy in callbacks between black and white males than there is among black and white females? Is there more of a discrepancy in callbacks between male and female blacks than there is among male and female whites?</p>
+</blockquote>
+<ol start="2" type="a">
+<li>Let’s try adding an interaction between gender and race. Update the code below to fit this new interaction model.</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit logistic model and save it as object called &quot;mod2&quot;</span></span>
@@ -4505,6 +4515,9 @@ window.Quarto = {
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="do">## 0.06627784 0.05828780 0.09892473 0.08869565</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Report and compare the predictions we get from <code>predict()</code>. Do they make sense to you based on your understanding of the data? Combine insights from visualizations and modeling to write a few sentences summarizing findings for our research question: <em>does an applicant’s inferred gender and race have an effect on the chance that they receive a callback after submitting their resume for an open job posting?</em></p>
+<blockquote class="blockquote">
+<p>The predicted probabilities from our logistic regression models show that we estimate those inferred to be black males have the lowest chance of receiving a callback (5.87% based on <code>mod1</code> and 5.83% based on <code>mod2</code>), followed by black females (6.62% and 6.63%), white males (8.83% and 8.87%), and then white females (9.91% and 9.89%). This matches the trend we observed that those inferred to be white have a greater chance of getting a callback, regardless of gender, and that those who are inferred to be female have a slightly higher chance of getting a callback than those inferred to be male.</p>
+</blockquote>
 </section>
 <section id="exercise-5-evaluating-logistic-models-with-plots" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-5-evaluating-logistic-models-with-plots">Exercise 5: Evaluating logistic models with plots</h2>
@@ -4728,7 +4741,7 @@ window.Quarto = {
 </tbody>
 </table>
 <blockquote class="blockquote">
-<p>In-class Notes!</p>
+<p>In-class Notes from the last class!</p>
 </blockquote>
 <ol start="2" type="a">
 <li>Now compute the following evaluation metrics for the models:</li>
