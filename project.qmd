@@ -3,5 +3,7 @@ title: "Project"
 sidebar: false
 ---
 
-Coming soon....
+- Please download and go through the [Project Instructions](https://docs.google.com/document/d/1AUJ-iUnDHFMQJvz2S4-2VQYPLMt5P729cCsbr4epR_M/edit?usp=sharing) in details.
+
+- The Rubrics for grading are [here](https://docs.google.com/spreadsheets/d/1CdmPgh1Nq40-yZ3BTjtSsqqk8q3ESVPrhZ03Q3mteIw/edit?usp=sharing).
 
