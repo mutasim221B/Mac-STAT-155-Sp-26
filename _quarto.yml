@@ -46,7 +46,7 @@ website:
           - "!activities/22-hypothesis-testing-discovery.qmd"
           - "!activities/21-confidence-intervals.qmd"
           - "!activities/19-20-sampling-dist-clt-bootstrap.qmd"
-          - "!activities/18-sampling-normal.qmd"
+          - "activities/18-sampling-normal.qmd"
           - "activities/17-logistic-regression-II.qmd"
           - "activities/15+16-Logistic-Regression-I.qmd"
           - "activities/13+14-mlr-model-building.qmd"
