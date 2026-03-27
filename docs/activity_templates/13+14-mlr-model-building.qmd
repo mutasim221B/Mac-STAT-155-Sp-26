@@ -92,6 +92,10 @@ penguin_model_4 <- lm(bill_len ~ body_mass, penguins)
 penguin_model_5 <- lm(bill_len ~ flipper_len + body_mass, penguins)
 ```
 
+```{r}
+penguin_model_6 <- lm(bill_len ~ flipper_len+sex, penguins)
+summary(penguin_model_6)
+```
 
 
 ## Exercise 1: Modeling bill length by flipper length
