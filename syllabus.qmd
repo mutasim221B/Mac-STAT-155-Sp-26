@@ -398,7 +398,7 @@ Preparation (checkpoints)
 | Modifier                          | Scenario                                                                 |
 |:----------------------------------|:-------------------------------------------------------------------------|
 | none <br>(e.g. A → A)            | Meets expectations in all two areas (Engagement and Preparation) |
-| ⅓ lower grade <br>(e.g. A → A-)  | Demonstrates strong progress (e.g., 4 absences OR less than 13 (out of 17) CPs (≈80%))  |
+| ⅓ lower grade <br>(e.g. A → A-)  | Demonstrates strong progress (e.g., 4 absences OR less than 11 (out of 15) CPs (≈80%))  |
 | 1 lower grade <br>(e.g. A → B)   | Demonstrates moderate progress (e.g., 5–6 absences OR less than 8 (out of 17) CPs (≈50%)) |
 | >1 lower grade                   | Demonstrates little progress toward expectations in two areas          |
 | Drop to D/NC                     | Has 7+ absences                                                          |
