@@ -4231,7 +4231,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#reflect" id="toc-reflect" class="nav-link" data-scroll-target="#reflect">REFLECT</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises:</a>
   <ul class="collapse">
   <li><a href="#exercise-1-500-samples-of-size-10" id="toc-exercise-1-500-samples-of-size-10" class="nav-link" data-scroll-target="#exercise-1-500-samples-of-size-10">Exercise 1: 500 samples of size 10</a></li>
   <li><a href="#exercise-2-why-resampling-replace-true" id="toc-exercise-2-why-resampling-replace-true" class="nav-link" data-scroll-target="#exercise-2-why-resampling-replace-true">Exercise 2: Why “resampling” (<code>replace = TRUE</code>)?</a></li>
@@ -4439,7 +4439,11 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 </section>
 </section>
 <section id="exercises" class="level1">
-<h1>Exercises</h1>
+<h1>Exercises:</h1>
+<ul>
+<li>Make sure that you are sunchronozed in your group.</li>
+<li>Work through the following exercises in your group - if you finish all of them, then collect your quiz paper and I will see you on Friday!</li>
+</ul>
 <section id="exercise-1-500-samples-of-size-10" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1-500-samples-of-size-10">Exercise 1: 500 samples of size 10</h2>
 <p>Recall that we can sample 10 observations from our dataset using <code>sample_n()</code>:</p>
@@ -4450,16 +4454,16 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 10 × 5</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">##    River   Station Length Weight Concen</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Wacamaw      15   47.5   1546   1.4 </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Wacamaw      15   36      702   0.92</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Wacamaw       7   34.5    496   0.58</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Wacamaw      12   38.2    573   0.59</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Wacamaw      14   40.2   1090   1.2 </span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Lumber        4   27.5    308   0.94</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Lumber        4   26      234   0.28</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Wacamaw      10   34.8    491   0.57</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Lumber        2   33.6    360   1.6 </span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Wacamaw      15   47.5   1546   1.4 </span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Lumber        2   30      329   0.85</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Lumber        3   40      898   1.2 </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Wacamaw       8   35.5    550   0.65</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Lumber        5   42     1049   1.2 </span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Wacamaw      10   40.2    796   0.86</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Lumber        4   36.5    723   0.49</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Lumber        4   29      353   0.35</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Wacamaw      10   34.5    560   0.69</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Wacamaw       8   33      518   0.55</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can take a sample and then use the data to estimate the model:</p>
 <div class="cell" data-layout-align="center">
@@ -4473,7 +4477,7 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Coefficients:</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)       Length  </span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="do">##    -1.45934      0.06421</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="do">##     -2.4067       0.0856</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can also take <em>multiple</em> unique samples and build a sample model from each.</p>
 <p>The code below obtains <em>500</em> separate samples of 10 fish, and stores the model estimates from each:</p>
@@ -4505,9 +4509,19 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 500   2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="a">
-<li><p>What’s the point of the <code>map_df()</code> function?!? If you’ve taken any COMP classes, what process do you think `<code>map_df()</code> is a shortcut for?</p></li>
-<li><p>What is stored in the <code>Intercept</code> and <code>Length</code> columns of the results?</p></li>
-<li><p>We’ll obtain a <strong>bootstrapping distribution</strong> of <span class="math inline">\(\hat{\beta}_1\)</span> by taking many (500, in this case) different samples of <em>every</em> fish in our dataset (171 of them) and exploring the degree to which <span class="math inline">\(\hat{\beta}_1\)</span> varies from sample to sample.</p></li>
+<li>What’s the point of the <code>map_df()</code> function?!? If you’ve taken any COMP classes, what process do you think `<code>map_df()</code> is a shortcut for?</li>
+</ol>
+<blockquote class="blockquote">
+<p><code>map_df()</code> repeats the code within the parentheses as many times as you tell it. map_df()` does repetition like a for loop.</p>
+</blockquote>
+<ol start="2" type="a">
+<li>What is stored in the <code>Intercept</code> and <code>Length</code> columns of the results?</li>
+</ol>
+<blockquote class="blockquote">
+<p>500 different sample estimates of the model</p>
+</blockquote>
+<ol start="3" type="a">
+<li>We’ll obtain a <strong>bootstrapping distribution</strong> of <span class="math inline">\(\hat{\beta}_1\)</span> by taking many (500, in this case) different samples of <em>every</em> fish in our dataset (171 of them) and exploring the degree to which <span class="math inline">\(\hat{\beta}_1\)</span> varies from sample to sample.</li>
 </ol>
 <p>Edit the code below to obtain a bootstrapping distribution.</p>
 <div class="cell" data-layout-align="center">

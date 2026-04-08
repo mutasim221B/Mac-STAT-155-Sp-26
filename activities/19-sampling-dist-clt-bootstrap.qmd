@@ -169,7 +169,9 @@ Neither approach is perfect, but they complement one another. **Bootrapping** in
 
 
 
-# Exercises
+# Exercises: 
+- Make sure that you are sunchronozed in your group.
+- Work through the following exercises in your group - if you finish all of them, then collect your quiz paper and I will see you on Friday!
 
 ## Exercise 1: 500 samples of size 10
 
@@ -216,9 +218,13 @@ dim(sample_models_10)
 
 a. What's the point of the `map_df()` function?!? If you've taken any COMP classes, what process do you think ``map_df()` is a shortcut for?
 
+> `map_df()` repeats the code within the parentheses as many times as you tell it. map_df()` does repetition like a for loop.
+
+
 
 b. What is stored in the `Intercept` and `Length` columns of the results?
-    
+
+> 500 different sample estimates of the model 
     
 c. We'll obtain a **bootstrapping distribution** of $\hat{\beta}_1$ by taking many (500, in this case) different samples of *every* fish in our dataset (171 of them) and exploring the degree to which $\hat{\beta}_1$ varies from sample to sample.
 
