@@ -4011,6 +4011,10 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
+    <a class="dropdown-item" href="../activities/20-confidence-intervals.html">
+ <span class="dropdown-text">Confidence Interval</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../activities/19-sampling-dist-clt-bootstrap.html">
  <span class="dropdown-text">Sampling Distribution, Central Limit Theorem, and Bootstrapping</span></a>
   </li>  
@@ -4120,8 +4124,11 @@ window.Quarto = {
  <span class="menu-text">!activities/22-hypothesis-testing-discovery.qmd</span>
   </li>
         <li class="sidebar-item">
- <span class="menu-text">!activities/20-confidence-intervals.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../activities/20-confidence-intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence Interval</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/19-sampling-dist-clt-bootstrap.html" class="sidebar-item-text sidebar-link">
@@ -4569,10 +4576,10 @@ E[UserScore \mid CriticScore] = \hat{\beta}_0 + \hat{\beta}_1 CriticScore
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try running the following chunk A FEW TIMES</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(fandango, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 2 × 3</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   film          userscore_rt criticscore_rt</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;chr&gt;                &lt;int&gt;          &lt;int&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Inherent Vice           52             73</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Cake                    47             49</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   film       userscore_rt criticscore_rt</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;chr&gt;             &lt;int&gt;          &lt;int&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Minions              52             54</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Wild Tales           92             96</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Reflect:</p>
 <ul>
