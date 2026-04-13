@@ -43,7 +43,7 @@ website:
           - "!activities/25-f-tests.qmd"
           - "!activities/24-hypothesis-testing-considerations.qmd"
           - "!activities/23-hypothesis-testing-details.qmd"
-          - "!activities/22-hypothesis-testing-discovery.qmd"
+          - "activities/21-hypothesis-testing-discovery.qmd"
           - "activities/20-confidence-intervals.qmd"
           - "activities/19-sampling-dist-clt-bootstrap.qmd"
           - "activities/18-sampling-normal.qmd"

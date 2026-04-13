@@ -155,9 +155,9 @@ b. Calculate the Z-scores for Drivers A and B.
 ```{r}
 # Driver A
 
-
+(60-55)/5
 # Driver B
-
+(36-30)/3
 
 ```
 

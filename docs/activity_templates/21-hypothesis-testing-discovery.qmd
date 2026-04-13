@@ -1,0 +1,1071 @@
+---
+title: "Hypothesis Testing- Discovery"
+subtitle: "Notes and in-class exercises"
+format: 
+  html:
+    embed-resources: true
+    toc: true
+---
+
+
+You can download the .qmd file for this activity [here](../activity_templates/21-hypothesis-testing-discovery.qmd) and open in R-studio. The rendered version is posted in the [course website](https://mutasim221b.github.io/Mac-STAT-155-Sp-26/) (Activities tab). I often experiment with the class activities (and see it in live!) and make updates, but I always post the final version before class starts. To be sure you have the most up-to-date copy, please download it once you’ve settled in before class begins.
+
+
+
+
+
+```{r setup}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  fig.height = 2.75, 
+  fig.width = 4.25,
+  fig.env = 'figure',
+  fig.pos = 'h',
+  fig.align = 'center')
+```
+
+
+# Notes
+
+- You can download a template file to work with [here](../activity_templates/22_hypothesis_testing_discovery.qmd).
+- **File organization:** Save this file in the "Activities" subfolder of your "STAT155" folder.
+
+## Learning goals
+
+By the end of this lesson, you should be able to:
+
+- Understand how standard errors and confidence intervals enable us to make statistical inferences
+- Articulate how we can formalize a research question as a testable, statistical hypothesis
+
+## Readings and videos
+
+This is a discovery activity, so no assigned readings/videos today.
+
+# Exercises
+
+Let's return to the `fish` dataset. Recall that rivers contain small concentrations of mercury which can accumulate in fish. Scientists studied this phenomenon among 171 largemouth bass in the Wacamaw and Lumber rivers of North Carolina, recording the following:
+
+
+| variable | meaning                                                  |
+|:---------|:---------------------------------------------------------|
+| River    | Lumber or Wacamaw                                        |
+| Station  | Station number where the fish was caught (0, 1, ..., 15) |
+| Length   | Fish's length (in centimeters)                           |
+| Weight   | Fish's weight (in grams)                                 |
+| Concen   | Fish's mercury concentration (in parts per million; ppm) |
+
+```{r}
+# Load the data & packages
+library(tidyverse)
+fish <- read_csv("https://mac-stat.github.io/data/Mercury.csv")
+
+head(fish)
+```
+
+
+## Exercise 1
+
+**Research question:** Is there evidence that the mercury concentration in fish (`Concen`) differs according to the `River` they were sampled from?
+
+### part a: fit the model
+
+Fit a simple linear regression model that would address our research question
+
+```{r}
+mod_fish <- lm(Concen ~ River, data=fish)
+summary(mod_fish)
+```
+
+Interpret the intercept from this model.
+
+> Our model estimates an average mercury concentration of 1.078ppm among fish in the Lumber River.
+
+### part b: construct a CI
+
+Using the 68-95-99.7 rule, construct an approximate 95% confidence interval for the intercept term, and provide an appropriate interpretation.
+
+```{r}
+# approximate 95% confidence interval
+
+1.078 + 2*0.089
+1.078 - 2*0.089
+```
+
+
+
+> Preferred interpretation: It is plausible that the true mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.
+
+> (technical addendum to this interpretation): ...specifically, we expect that if we take many different samples and obtain a set of corresponding parameter estimates and confidence intervals, we expect that 95% of the resulting intervals will contain the true mean mercury concentration of the entire Lumber River fish population. We hope that our interval is one of the lucky 95% and not one of the unlucky 5% that don't contain the true population parameter.
+
+> Not as preferred interpretation, but still okay for this course: We are 95% confident that the mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.
+
+
+Compare your CI to an exact 95% confidence interval for the model coefficients:
+
+```{r}
+confint(mod_fish, level=0.95)
+```
+
+
+### part c: what can we conclude from multiple samples?
+
+Suppose we take 200 different samples of fish from the Lumber River. Based on these results, in how many of those samples would you expect to observe mean mercury concentration **greater than** 1.25ppm?
+
+> This is certainly plausible, since our 95% CI contains 0 (i.e., there is no difference in means between the two rivers). However, we might also argue that there is SOME evidence of a difference, since most of the CI is > 0.
+
+
+### part d: intuition for constructing & interpreting test statistics
+
+Suppose previous environmental studies have found little evidence of mercury pollution in other rivers in the area, so perhaps our "default" assumption is that fish from the Lumber river *should* have an expected mercury concentration of 0ppm. How many standard errors is our sample estimate (1.078ppm) away from this expectation? What are three possible conclusions?
+
+> If we assume that 0ppm is the "true" mercury concentration, then our estimate of Beta_0 = 1.078ppm with a standard error of 0.08866 means that our estimate is (1.07808-0)/0.08866 = 12.16 standard errors away from what we should expect.
+
+> Possible conclusions:
+
+> 1) Our working assumption that 0ppm should be the "true" mercury concentration in the Lumber river fish population was wrong! The confidence interval we constructed above suggests that a true value of 0ppm is extremely implausible.
+
+> 2) Perhaps ~0ppm is actually the true average mercury concentration in the population, we just got extremely, outrageously unlucky with our sample.
+
+> 3) Perhaps there was a measurement/data entry error, and the units are actually parts per billion, not million.
+
+
+### part e: do individual observations contradict our conclusions?
+
+Now suppose we sample a *single* fish from the Lumber River and find it has a mercury concentration of 2.5ppm. Are you surprised by this result? Why or why not? (Hint: create a code chunk that calculates the mean, standard deviation, and maximum of the `Concen` variable in each river in our original sample)
+
+```{r}
+fish %>% 
+  group_by(River) %>% 
+  summarise(mean=mean(Concen), 
+            sd=sd(Concen), 
+            max=max(Concen))
+```
+
+> Observing a *single* fish with a mercury concentration of 2.5ppm is actually not that surprising! 2.5ppm is a little more than 2 standard deviations away from the mean mercury concentration in our sample of fish from the Lumber River (1.08+2*0.64=2.43), but there are certainly fish in the sample with even higher mercury concentrations (max=3.5ppm), so this isn't outside the bounds of what we'd expect.
+
+
+
+
+> Class Notes
+
+**Additional Reading (after class): FORMAL HYPOTHESIS TESTS**
+
+Though CIs can help us evaluate hypotheses, **hypothesis tests** provide a more formal approach.
+The general idea:
+
+1. Assume that the hypothesis is *not* true.    
+2. Determine what sample observations would be *expected* under this assumption.    
+3. Evaluate how compatible *our* observed sample data are with this assumption (are they consistent with what we'd expect?).
+
+Or, in context:
+
+1. Assume there were truly *no* association between mercury concentration and fish length, i.e. $\beta_1 = 0$ (the "null value").
+2. Determine how our fish sample might have "behaved" if there were truly no association.
+3. Evaluate how compatible our fish sample observations are with the null value (are they consistent with what we'd expect if there were no association?).
+
+
+## Exercise 1: 
+
+Let's look at the model summary output again:
+
+```{r}
+summary(mod_fish)
+```
+
+### part a: interpret model coefficient
+
+Now, let's interpret the `RiverWacamaw` coefficient. Based *only* on the coefficient (don't think about the standard error yet), what can we say about the difference in mercury concentration among fish in the two rivers?
+
+> **Response**
+
+### part b: construct a CI
+
+Using the 68-95-99.7 rule, construct an approximate 95% confidence interval for the `RiverWacamaw` coefficient, and provide an appropriate interpretation.
+
+> **Response** 
+
+### part c: interpreting the CI
+
+Do you believe it *plausible* that the mean mercury concentration of the fish population in the Wacamaw River is approximately the same as that of the fish population in the Lumber River? How would you confirm this? What assumptions are you making?
+
+> **Response**
+
+### part d: effect of sample size on our conclusions
+
+Suppose we sample 10 times as many fish from the Wacamaw River, and get a similar coefficient estimate (0.2). Thinking back to the Central Limit Theorem, what should happen to the standard error of the `RiverWacamaw` coefficient? How small of a standard error would we need to more conclusively say that there is an actual difference in mean mercury concentrations of the Lumber River and Wacamaw River fish populations?
+
+> **Response**
+
+### part e: reconciling parameter estimates and uncertainty
+
+Suppose the *true* population coefficient for the `RiverWacamaw`parameter is 0.02 (i.e. the average mercury concentration is 0.02ppm higher for the Wacamaw River fish population compared to that of the Lumber River). Is this meaningful? 
+
+> **Response**
+
+
+
+### part f (CHALLENGE)
+
+Using the model summary output, report the mean mercury concentration for our sample of fish from the *Wacamaw River*:
+
+```{r}
+summary(mod_fish)
+```
+
+> **Response:** 
+
+Which of the following values do you think is the standard error of the sample mean for the Wacamaw River?
+
+- 0.11712
+- 0.08866
+- 0.11712 + 0.08866 = 0.20578
+- 0.11712 - 0.08866 = 0.02846
+- something else
+
+To answer this question, look at the code chunk below, which fits the same model, but uses the Wacamaw River as our reference category instead of the Lumber River:
+
+```{r}
+mod_fish2 <- lm(Concen ~ River, data=fish %>% mutate(River=ifelse(River == "Wacamaw", paste0("_", River), River)))
+summary(mod_fish2)
+```
+
+Compare this to the output for `mod_fish`. What do you notice about the standard errors of the intercepts (i.e., the standard errors of the means for each river) compared to the standard errors of the `RiverWacamaw` and `RiverLumber` coefficients (i.e., the standard errors of the **differences** between the means)?
+
+> **Response:** 
+
+
+# Additional Exercise {-}
+
+
+**NOTE**
+
+- The goal of these additional exercises is to explore *concepts* in hypothesis testing.
+    There's some new code that helps with this exploration, but the *code is not the point*!!
+    Throughout, focus on the *goal* of the code and what its *output* tells us, NOT the *details* of the code.
+    
+- Our results will start to use more **scientific notation**. Examples:   
+    - `3e-02` = 0.03 (move the decimal 2 places to the *left*)
+    - `3e02` = 300 (move the decimal 2 places to the *right*)
+    - `4.12e-07` = 0.000000412 (move the decimal 7 places to the *left*)
+    - `4.12e03` = 4120 (move the decimal 3 places to the *right*)
+    - `< 2e-16` = the result is *less than* 0.0000000000000002 (it's really really small!)
+    
+
+## Exercise 1: Simulating data under the null value
+
+To begin testing our *hypothesis* that there *is* an association between mercury concentration and fish length ($\beta_1 \ne 0$), let's explore how our sample data might behave IF in fact there were *no* association ($\beta_1 = 0$).
+We'll first do this using *simulation*, and then through *theory*.
+
+a. Read carefully:
+
+- Suppose that when each individual fish in our sample was collected, the scientists wrote its `Concen` and `Length` on a piece of paper.
+
+- They then ripped the paper in half, with the observed `Concen` on one half and the observed `Length` on the other.
+
+- They then accidentally dropped the pieces of paper! In the resulting mess, they couldn't tell which `Length` observation went with each `Concen` observation.
+
+- To cover up their mistake, they just randomly matched up the `Length` and `Concen` pieces of paper. Essentially, in this shuffling process, the scientists broke the bond of the original `Length` and `Concen` pairs.
+
+Question: Intuitively, if the researchers plotted the new pairs of `Concen` and `Length` values, what do you think their scatterplot would look like? What about their sample model?
+
+
+b. We can simulate this idea in RStudio! Throughout, focus on concepts over code.
+
+```{r}
+# First check out the first 6 fish
+fish %>% 
+  select(Concen, Length) %>% 
+  head()
+```
+
+Now, randomly shuffle the `Length` values!
+That is, break the original `Concen` and `Length` pairs, and just randomly assign `Length`:
+
+```{r}
+# Run this chunk a few times!!
+# Shuffle the Length values
+fish %>%
+  select(Concen, Length) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>% 
+  head()
+```
+
+Let's check out the sample models that arise from the shuffled `Concen` and `Length` pairs.
+Summarize your observations! Was your intuition in Part a correct?
+
+```{r}
+# Shuffle the Length values
+# Run this chunk a few times!!
+# Then plot the resulting sample data and model
+fish %>% 
+  select(Concen, Length) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+
+c. These shuffled samples give us a sense of the sample models we'd expect IF $\beta_1$ were actually 0, i.e. if there were no relationship between `Concen` and `Length` in the broader population of fish.
+To get a sense of the range of possible outcomes in this scenario, let's simulate a bunch of shuffled samples.
+Specifically, take 500 different shuffled samples and use each to estimate the model of `Concen` by `Length` (gray lines).
+Summarize your observations!!
+If there were truly no relationship between `Concen` and `Length`, how would we expect the sample data to behave?
+
+```{r}
+set.seed(1)
+shuffled_models <- mosaic::do(500)*(
+  fish %>% 
+  select(Concen, Length) %>% 
+  sample_n(size = length(Length), replace = TRUE) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>%
+  with(lm(Concen ~ Length))
+)
+head(shuffled_models)
+```
+
+
+```{r}
+# Plot the 500 shuffled models
+fish %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_abline(data = shuffled_models, 
+              aes(intercept = Intercept, slope = Length), 
+              color = "gray", size = 0.25) + 
+  geom_smooth(method = "lm", se = FALSE, size = 0) # Ignore this line. It's a clunky workaround
+```
+
+d. Finally, focus on just the *slope* estimates $\hat{\beta}_1$ behind the lines above. Summarize your observations!! If there were truly no relationship between `Concen` and `Length`, i.e. $\beta_1$ were truly 0, how would we expect the sample slopes to behave?
+
+```{r}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density()
+```
+
+
+
+## Exercise 2: Comparing our sample results to the null value (intuition)
+
+Now that we've simulated how sample data might behave if there were truly no relationship between `Concen` and `Length` (i.e. if $\beta_1$ were 0), let's consider the next important step in a **hypothesis test**:
+
+Evaluate how compatible our observed sample data are with this assumption that $\beta_1 = 0$!
+
+
+a. Let's start with a visual assessment. Is *our* sample model (blue line) consistent / compatible with the "null models" simulated under the assumption the $\beta_1 = 0$ (gray lines)?
+
+
+```{r}
+fish %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_abline(data = shuffled_models, 
+              aes(intercept = Intercept, slope = Length), 
+              color = "gray", size = 0.25) + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+b. Consider another visual assessment, focusing just on the *slopes* of the lines in the plot above, i.e. our sample estimates $\hat{\beta}_1$.
+Is *our* sample slope of $\hat{\beta}_1 = 0.05813$ (blue line) consistent / compatible with the collection of slopes from the "null models" (density plot)?
+
+```{r}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density() + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+
+c. In Part b, you evaluated the compatibility of *our* sample slope $\hat{\beta}_1 = 0.05813$ model with slopes of the "null models" using visual cues alone. But for a formal hypothesis test, we need some *numerical* measures of compatibility. Brainstorm some ideas!
+
+
+
+
+## Exercise 3: CLT
+
+Now that we've built up some intuition using *simulation*, let's formalize these concepts with some *theory*.
+
+You shouldn't be surprised to know that sampling distributions are at the heart of hypothesis testing! The distribution of slopes from our shuffled sample models uses *simulation* to *approximate* the sampling distribution of slope estimates $\hat{\beta}_1$ we'd expect if the population slope $\beta_1$ were actually 0 (the null value):
+
+```{r}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density()
+```
+
+We can also approximate the sampling distribution using mathematical *theory*, specifically the Central Limit Theorem.
+If $\beta_1$ were truly 0, then the distribution of possible sample estimates $\hat{\beta}_1$ would be Normally distributed around 0:
+
+$$
+\hat{\beta}_1 \sim N(0, s.e.(\hat{\beta}_1)^2)
+$$
+
+where in Example 1 we approximated the standard error to be 0.005.
+Thus a plot of the CLT is below.
+Confirm that this is *similar* to the simulated sampling distribution above:
+
+```{r}
+# Don't worry about this code!!!
+# Save your plot
+clt_plot <- data.frame(x = 0 + c(-4:4)*0.005) %>% 
+  mutate(y = dnorm(x, sd = 0.005)) %>% 
+  ggplot(aes(x = x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 0.005)) +
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = "dashed") + 
+  scale_x_continuous(breaks = c(-4:4)*0.005) + 
+  xlab("")
+  
+clt_plot
+```
+
+
+
+## Exercise 4: Comparing our sample results to the null value (test statistic)
+
+*Our* sample slope estimate of $\hat{\beta}_1 = 0.05813$ is shown on the sampling distribution of sample slopes $\hat{\beta}_1$ that we'd expect if the population slope $\beta_1$ were actually 0 (the null value):
+
+```{r}
+clt_plot + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+To measure how compatible (or incompatible) our estimate is with the null value, we can measure the *distance* between the two.
+
+a. *Our* sample slope estimate of $\hat{\beta}_1 = 0.05813$ is 0.05813 units (ppm/cm) from the null value of 0.
+
+- In the context of this particular analysis, is that a big or a small number? *How can you tell?* That is, what info are you using to make this assessment?
+
+- Would your answer be the same if you observed this estimate in another context?
+
+
+b. In practice, we *standardize* our distance calculations so that they have the same meaning no matter the context of the analysis. We can do this by calculating a z-score:
+
+$$
+\frac{\hat{\beta}_1 - \text{null value}}{s.e.(\hat{\beta}_1))} = \text{ number of s.e. that $\hat{\beta}_1$ falls from the null value}
+$$
+
+This is called the **test statistic**.
+Calculate *and interpret* the test statistic for our example.
+
+
+c. Within rounding, the same test statistic appears in our model summary table!
+Where is it?!
+
+```{r}
+coef(summary(fish_mod_1))
+```
+
+d. What can we conclude from your test statistic calculation and interpretation:
+
+- Our sample data is *not* consistent with the null value of $\beta_1 = 0$, i.e. the idea that there's no significant association between mercury concentration and length.
+
+- Our sample data *is* consistent with the null value of $\beta_1 = 0$.
+
+
+
+
+
+## Exercise 5: Comparing our sample results to the null value (p-value)
+
+
+Again, *our* sample slope estimate of $\hat{\beta}_1 = 0.05813$ is shown on the sampling distribution of sample slopes $\hat{\beta}_1$ that we'd expect if the population slope $\beta_1$ were actually 0 (the null value):
+
+```{r}
+clt_plot + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+
+a. Another way to evaluate the compatibility of our estimate with the null value of $\beta_1 = 0$ is to ask how likely we are to have gotten this estimate if the null value were indeed true! That is, what's the *probability* that we would have gotten a sample slope that's at least 0.058 above *or* below 0 IF in fact there were *no* association between mercury concentration and length? Equivalently, what's the *probability* that we would have gotten a test statistic so far from 0 IF in fact $\beta_1$ were 0? Use the 68-95-99.7 Rule with the plot above to *approximate* the p-value:
+
+- less than 0.003
+- between 0.003 and 0.05
+- between 0.05 and 0.32
+- bigger than 0.32
+
+
+b. The calculation above is called a **p-value**. A more accurate p-value is reported in the model summary table in the `Pr(>|t|)` column. What is it?
+
+```{r}
+coef(summary(fish_mod_1))
+```
+
+c. How can we interpret the p-value? IMPORTANT: Think about the steps that went into calculating the p-value!!
+
+- It's very unlikely that we’d have observed such a steep increase in `Concen` with `Length` among our sample fish "by chance", i.e. if in fact there were no relationship between mercury concentration and length in the broader fish population.
+
+- Given what we observed in our sample data, it's very unlikely that mercury concentration is associated with length.
+
+- Given what we observed in our sample data, it’s very unlikely that mercury concentration and length are unrelated.
+
+PAUSE: Check the solutions to this question! p-values are commonly misinterpreted.
+
+
+
+## Exercise 6: River test Part I
+
+The fish in our sample come from two different rivers: Lumber and Wacamaw.
+**Research question:** Is there evidence that the mercury concentration in fish differs between the 2 rivers?
+To answer this question, we'll control for fish `Length` -- we don't want to mistakenly detect a difference in mercury levels just because we happened to sample bigger fish in one river and smaller fish in the other.
+The relevant population model is:
+
+$$
+E[Concen | River, Length] = \beta_0 + \beta_1 RiverWacamaw + \beta_2 Length
+$$
+
+a. To address the above research question, which model coefficient / population parameter is of primary interest: $\beta_0$, $\beta_1$, or $\beta_2$? And what's the *null value* of this coefficient? That is, what would this coefficient be if there were truly no difference in mercury concentration between the 2 rivers (when controlling for length)?
+
+b. For the parameter of interest, obtain and report a sample estimate and its corresponding standard error: 
+
+```{r}
+fish_mod_2 <- lm(___, data = fish)
+
+coef(summary(fish_mod_2))
+```
+
+c. Let's use this data to evaluate our research question. To do so, remember the next step: Assume that the null value from Part a is correct and determine what sample estimates we would *expect* to get in this scenario.
+
+Adjust the code below to sketch the appropriate sampling distribution.
+Represent *our* sample estimate by a blue line.
+
+```{r}
+# Put OUR sample estimate here
+# Round to 3 digits
+est <- ___
+
+# Put the corresponding standard error here
+# Round to 3 digits
+se <- ___
+
+data.frame(x = 0 + c(-4:4)*se) %>% 
+  mutate(y = dnorm(x, sd = se)) %>% 
+  ggplot(aes(x = x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = se)) +
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = "dashed") + 
+  scale_x_continuous(breaks = c(-4:4)*se) + 
+  geom_vline(xintercept = est, color = "blue") +
+  labs(y = "density", x = "possible estimates IF the null value were true") 
+```
+
+
+## Exercise 7: River test Part II
+
+Remember the next step: We must evaluate how compatible our sample estimate is with the null value.
+We'll take 3 approaches: using a visual assessment, test statistic, and p-value.
+
+a. Visually, in Part c of the previous exercise, does our sample estimate seem compatible with the null value? Mainly, is our estimate consistent with what we'd expect to observe if there were truly no difference in the mercury concentration between the 2 rivers (when controlling for fish length)?
+
+b. Let's focus on the test statistic:
+
+- Obtain the *test statistic* from the model summary table below.
+- Show *how* this was calculated from the sample estimate and its standard error.
+- *Interpret* the test statistic.
+
+```{r}
+coef(summary(fish_mod_2))
+```
+
+
+c. Recall that the p-value calculates the *probability* that, IF in fact the null value were correct (i.e. there was actually *no* difference in mercury concentration by river when controlling for length), we would have gotten a sample estimate that's as far from the null value as ours, either above or below. Use the 68-95-99.7 Rule with the plot in Part c of the previous exercise to approximate the p-value:
+
+- less than 0.003
+- between 0.003 and 0.05
+- between 0.05 and 0.32
+- bigger than 0.32
+
+Now obtain and report the exact p-value from the model summary table.
+
+```{r}
+
+```
+
+
+d. Do your test statistic and p-value indicate that your estimate is or is not compatible with the null value? Explain.
+
+
+e. Putting this all together, what do you conclude? When controlling for length...
+
+- we have evidence of a statistically significant difference in mercury concentration by river.
+- we do not have sufficient evidence to conclude that there's a statistically significant difference in mercury concentration by river.
+
+
+
+## Exercise 8: River CI
+
+a. Finally, construct a 95% CI for the population parameter of interest in our river analysis.
+
+```{r}
+
+```
+
+b. What do you conclude from this CI? When controlling for length...
+
+- we have evidence of a statistically significant difference in mercury concentration by river.
+- we do not have sufficient evidence to conclude that there's a statistically significant difference in mercury concentration by river.
+
+c. Your conclusions from the hypothesis test (test statistic and p-value) should agree with those from your CI! If this is not the case, review your work.
+
+
+\
+\
+\
+\
+
+
+
+
+# Solutions
+
+```{r eval = TRUE, echo = FALSE}
+# Load the data & packages
+library(tidyverse)
+fish <- read_csv("https://mac-stat.github.io/data/Mercury.csv")
+```
+
+
+## Exercise 1
+
+**Research question:** Is there evidence that the mercury concentration in fish (`Concen`) differs according to the `River` they were sampled from?
+
+### part a: fit the model
+
+Fit a simple linear regression model that would address our research question
+
+```{r eval = TRUE}
+mod_fish <- lm(Concen ~ River, data=fish)
+summary(mod_fish)
+```
+
+Interpret the intercept from this model.
+
+> Our model estimates an average mercury concentration of 1.078ppm among fish in the Lumber River.
+
+### part b: construct a CI
+
+Using the 68-95-99.7 rule, construct an approximate 95% confidence interval for the intercept term, and provide an appropriate interpretation.
+
+> 1.078 +/- 2*0.089 --> [0.90, 1.256]
+
+> Preferred interpretation: It is plausible that the true mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.
+
+> (technical addendum to this interpretation): ...specifically, we expect that if we take many different samples and obtain a set of corresponding parameter estimates and confidence intervals, we expect that 95% of the resulting intervals will contain the true mean mercury concentration of the entire Lumber River fish population. We hope that our interval is one of the lucky 95% and not one of the unlucky 5% that don't contain the true population parameter.
+
+> Not as preferred interpretation, but still okay for this course: We are 95% confident that the mean mercury concentration among fish in the Lumber River is between 0.90ppm and 1.25ppm.
+
+Compare your CI to an exact 95% confidence interval for the model coefficients:
+
+```{r eval = TRUE}
+confint(mod_fish, level=0.95)
+```
+
+### part c: what can we conclude from multiple samples?
+
+Suppose we take 200 different samples of fish from the Lumber River. In how many of those samples would you expect to observe an estimated mean mercury concentration **greater than** 1.25ppm?
+
+> We don't/can't actually know! This depends on the true population parameter and the accuracy of our sampling distribution.
+
+> What we *can* say is that if our sampling distribution model is accurate, then we should expect that about 10 out of 200 samples (5% of them) will produce confidence intervals that *don't* contain the population parameter. We should expect that half of these--so 5 samples--are overestimates and the other half are underestimates.
+
+### part d: intuition for constructing & interpreting test statistics
+
+Suppose previous environmental studies have found little evidence of mercury pollution in other rivers in the area, so perhaps our "default" assumption is that fish from the Lumber river *should* have an expected mercury concentration of 0ppm. How many standard errors is our sample estimate (1.078ppm) away from this expectation? What are three possible conclusions?
+
+> If we assume that 0ppm is the "true" mercury concentration, then our estimate of Beta_0 = 1.078ppm with a standard error of 0.08866 means that our estimate is (1.07808-0)/0.08866 = 12.16 standard errors away from what we should expect.
+
+> Possible conclusions:
+
+> 1) Our working assumption that 0ppm should be the "true" mercury concentration in the Lumber river fish population was wrong! The confidence interval we constructed above suggests that a true value of 0ppm is extremely implausible.
+
+> 2) Perhaps ~0ppm is actually the true average mercury concentration in the population, we just got extremely, outrageously unlucky with our sample.
+
+> 3) Perhaps there was a measurement/data entry error, and the units are actually parts per billion, not million.
+
+### part e: do individual observations contradict our conclusions?
+
+Now suppose we sample a *single* fish from the Lumber River and find it has a mercury concentration of 2.5ppm. Are you surprised by this result? Why or why not? (Hint: create a code chunk that calculates the mean, standard deviation, and maximum of the `Concen` variable in each river in our original sample)
+
+```{r eval = TRUE}
+fish %>% 
+  group_by(River) %>% 
+  summarise(mean=mean(Concen), 
+            sd=sd(Concen), 
+            max=max(Concen))
+```
+
+> Observing a *single* fish with a mercury concentration of 2.5ppm is actually not that surprising! 2.5ppm is a little more than 2 standard deviations away from the mean mercury concentration in our sample of fish from the Lumber River (1.08+2*0.64=2.43), but there are certainly fish in the sample with even higher mercury concentrations (max=3.5ppm), so this isn't outside the bounds of what we'd expect.
+
+## Exercise 1
+
+Let's look at the model summary output again:
+
+```{r eval = TRUE}
+summary(mod_fish)
+```
+
+### part a: interpret model coefficient
+
+Now, let's interpret the `RiverWacamaw` coefficient. Based *only* on the coefficient (don't think about the standard error yet), what can we say about the difference in mercury concentration among fish in the two rivers?
+
+> The `RiverWacamaw` coefficient is 0.19835, meaning that the mean mercury concentration among fish in the Wacamaw River is, on average, about 0.20ppm *higher* than that of fish in the Lumber River.
+
+### part b: construct a CI
+
+Using the 68-95-99.7 rule, construct an approximate 95% confidence interval for the `RiverWacamaw` coefficient, and provide an appropriate interpretation.
+
+> 0.20 +/- 2*0.11 --> [-0.02, 0.42]
+
+> Preferred interpretation: It is plausible that the true *difference* in mean mercury concentration among fish in the Wacamaw River compared to the Lumber River is between -0.02 ppm and 0.42ppm.
+
+> Not as preferred interpretation: We are 95% confident that the mean mercury concentration among fish in the Wacamaw River somewhere between 0.02ppm *less* than that of fish in the Lumber River and 0.42ppm *more* than that of fish in the Lumber River. 
+
+### part c: interpreting the CI
+
+Do you believe it *plausible* that the mean mercury concentration of the fish population in the Wacamaw River is approximately the same as that of the fish population in the Lumber River? How would you confirm this? What assumptions are you making?
+
+> Answers may vary--this is certainly plausible, since our 95% CI contains 0 (i.e., there is no difference in means between the two rivers). However, we might also argue that there is SOME evidence of a difference, since most of the CI is > 0.
+
+### part d: effect of sample size on our conclusions
+
+Suppose we sample 10 times as many fish from the Wacamaw River, and get a similar coefficient estimate (0.2). Thinking back to the Central Limit Theorem, what should happen to the standard error of the `RiverWacamaw` coefficient? How small of a standard error would we need to more conclusively say that there is an actual difference in mean mercury concentrations of the Lumber River and Wacamaw River fish populations?
+
+> A larger sample should result in a smaller standard error of the `RiverWacamaw` coefficient. If the standard error is smaller than 0.1 (say 0.098), then a 95% confidence interval would be [0.004, 0.396]. Since this interval doesn't include 0, we could conclude that fish in the Wacamaw River, on average, have a higher mercury concentration than fish in the Lumber River. More importantly, the lower standard error of the coefficient allows us to say there is evidence *that this difference should be observable across new samples.*
+
+### part e: reconciling parameter estimates and uncertainty
+
+Suppose the *true* population coefficient for the `RiverWacamaw`parameter is 0.02 (i.e. the average mercury concentration is 0.02ppm higher for the Wacamaw River fish population compared to that of the Lumber River). Is this meaningful? 
+
+> This will depend on context--a priori, this difference appears to be negligible, and we could potentially chalk it up to uncontrolled confounders (e.g., perhaps fish in one river tend to be older/bigger and therefore have slightly higher mercury concentrations, even if there is no underlying difference in mercury pollution). We also might consider: what is considered a "harmful" mercury concentration, and are fish in either river near that threshold? Has this changed over time, and by how much?
+
+
+### part f: (CHALLENGE)
+
+Using the model summary output, report the mean mercury concentration for our sample of fish from the *Wacamaw River*:
+
+```{r eval = TRUE}
+summary(mod_fish)
+```
+
+> 1.07808 + 0.19835 = 1.27643ppm
+
+Which of the following values do you think is the standard error of the sample mean for the Wacamaw River?
+
+To answer this question, look at the code chunk below, which fits the same model, but uses the Wacamaw River as our reference category instead of the Lumber River:
+
+```{r eval = TRUE}
+mod_fish2 <- lm(Concen ~ River, data=fish %>% mutate(River=ifelse(River == "Wacamaw", paste0("_", River), River)))
+summary(mod_fish2)
+```
+
+Compare this to the output for `mod_fish`. What do you notice about the standard errors of the intercepts (i.e., the standard errors of the means for each river) compared to the standard errors of the `RiverWacamaw` and `RiverLumber` coefficients (i.e., the standard errors of the **differences** between the means)?
+
+> SEs for the means are 0.08866 and 0.07652 for the Lumber and Wacamaw rivers, respectively. The SE for the difference is the same in both models (0.11712), which is greater than the SE of either mean. Because standard errors quantify uncertainty in a given parameter estimate, this tells us that the uncertainty of the estimated difference between two means is greater than the uncertainty in our estimate of either mean by itself.
+
+# Solution of Additional Exercise
+
+## Exercise 1: Simulating data under the null value
+
+### Part a
+
+Intuition.
+
+### Part b
+
+
+```{r eval = TRUE}
+# First check out the first 6 fish
+fish %>% 
+  select(Concen, Length) %>% 
+  head()
+
+# Run this chunk a few times!!
+# Shuffle the Length values
+fish %>%
+  select(Concen, Length) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>% 
+  head()
+
+# Shuffle the Length values
+# Run this chunk a few times!!
+# Then plot the resulting sample data and model
+fish %>% 
+  select(Concen, Length) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+
+
+### Part c 
+
+If there were truly no relationship between `Concen` and `Length`, we'd expect the sample model to have a slope near to (but not exactly) 0.
+
+```{r eval = TRUE}
+set.seed(1)
+shuffled_models <- mosaic::do(500)*(
+  fish %>% 
+  select(Concen, Length) %>% 
+  sample_n(size = length(Length), replace = TRUE) %>% 
+  mutate(Length = sample(Length, size = length(Length), replace = FALSE)) %>%
+  with(lm(Concen ~ Length))
+)
+head(shuffled_models)
+
+fish %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_abline(data = shuffled_models, 
+              aes(intercept = Intercept, slope = Length), 
+              color = "gray", size = 0.25) + 
+  geom_smooth(method = "lm", se = FALSE, size = 0) # Ignore this line. It's a clunky workaround
+```
+
+### Part d
+
+We'd expect slopes to be Normally distributed around 0 (the null value).
+
+
+```{r eval = TRUE}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density()
+```
+
+
+
+## Exercise 2: Comparing our sample results to the null value (intuition)
+
+### Part a
+
+No! Its slope is much bigger than for the sample models simulated using the null value!
+
+```{r eval = TRUE}
+fish %>% 
+  ggplot(aes(x = Length, y = Concen)) + 
+  geom_abline(data = shuffled_models, 
+              aes(intercept = Intercept, slope = Length), 
+              color = "gray", size = 0.25) + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+### Part b
+
+No! Our slope is much bigger than for the sample models simulated using the null value!
+
+```{r eval = TRUE}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density() + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+
+### Part c 
+
+Will vary.
+
+
+## Exercise 3: CLT
+
+The simulated and CLT / theory-informed sampling distributions are similar!
+
+```{r eval = TRUE}
+shuffled_models %>% 
+  ggplot(aes(x = Length)) + 
+  geom_density()
+
+clt_plot <- data.frame(x = 0 + c(-4:4)*0.005) %>% 
+  mutate(y = dnorm(x, sd = 0.005)) %>% 
+  ggplot(aes(x = x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = 0.005)) +
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = "dashed") + 
+  scale_x_continuous(breaks = c(-4:4)*0.005) + 
+  xlab("")
+  
+clt_plot
+```
+
+
+
+
+
+## Exercise 4: Comparing our sample results to the null value (test statistic)
+
+```{r eval = TRUE}
+clt_plot + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+### Part a 
+
+
+- How far is *our* sample slope estimate of $\hat{\beta}_1 = 0.05813$ from the null value of 0? 0.05813 :)
+
+- In the context of this particular analysis, is that a big or a small number? How can you tell? This seems pretty big relative to the standard error.
+
+
+### Part b 
+
+Our sample slope of 0.058 falls more than 11 standard errors above the null value of 0.
+That's far!!!
+
+```{r eval = TRUE}
+(0.058127 - 0) / 0.005228
+```
+
+### Part c
+
+In the `t value` column:
+
+```{r eval = TRUE}
+coef(summary(fish_mod_1))
+```
+
+### Part d
+
+- Our sample data is *not* consistent with the null value of $\beta_1 = 0$, i.e. the idea that there's no significant association between mercury concentration and length.
+
+
+
+
+
+## Exercise 5: Comparing our sample results to the null value (p-value)
+
+
+```{r eval = TRUE}
+clt_plot + 
+  geom_vline(xintercept = 0.05813, color = "blue")
+```
+
+
+### Part a
+
+Our estimate is more than 3 s.e. away from 0. Since 99.7% of estimates fall within 3 s.e. the probability of this happening is...
+
+- less than 0.003 (1 - 0.997)
+
+
+### Part b
+
+< 2e-16 (which is very very close to 0)
+
+```{r eval = TRUE}
+coef(summary(fish_mod_1))
+```
+
+### Part c
+
+
+- It's very unlikely that we’d have observed such a steep increase in `Concen` with `Length` among our sample fish "by chance", i.e. if in fact there were no relationship between mercury concentration and length in the broader fish population.
+
+
+
+
+## Exercise 6: River test Part I
+
+
+### Part a 
+
+$\beta_1$, the RiverWacamaw coefficient
+
+The null value is $\beta_1 = 0$
+
+### Part b
+
+$\hat{\beta}_1 = 0.142$ with a standard error of 0.089:
+
+```{r eval = TRUE}
+fish_mod_2 <- lm(Concen ~ River + Length, data = fish)
+
+coef(summary(fish_mod_2))
+```
+
+### Part c
+
+```{r eval = TRUE}
+# Put OUR sample estimate here
+# Round to 3 digits
+est <- 0.142
+
+# Put the corresponding standard error here
+# Round to 3 digits
+se <- 0.089
+
+data.frame(x = 0 + c(-4:4)*se) %>% 
+  mutate(y = dnorm(x, sd = se)) %>% 
+  ggplot(aes(x = x)) +
+  stat_function(fun = dnorm, args = list(mean = 0, sd = se)) +
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y), linetype = "dashed") + 
+  scale_x_continuous(breaks = c(-4:4)*se) + 
+  geom_vline(xintercept = est, color = "blue") +
+  labs(y = "density", x = "possible estimates IF the null value were true") 
+```
+
+
+## Exercise 7: River test Part II
+
+### Part a
+
+Yes! Our estimate is relatively close to 0 on this scale (within 2 s.e.).
+
+
+### Part b
+
+Our estimate of $\beta_1$, 0.142, falls only 1.59 s.e. from 0:
+
+```{r eval = TRUE}
+(0.142 - 0) / 0.089
+coef(summary(fish_mod_2))
+```
+
+
+### Part c
+
+Our estimate is somewhere between 1 and 2 s.e. from 0:
+
+- between 0.05 and 0.32
+
+An exact p-value is 0.114:
+
+```{r eval = TRUE}
+coef(summary(fish_mod_2))
+```
+
+
+### Part d
+
+It is. It is not very far from 0 (when considering s.e.) and would not be unlikely to observe if the null value were true.
+
+
+### Part e
+
+When controlling for length...
+
+- we do not have sufficient evidence to conclude that there's a statistically significant difference in mercury concentration by river.
+
+
+
+## Exercise 8: River CI
+
+### Part a
+
+Rough version:
+
+$0.142 \pm 2*0.089 = (-0.036, 0.320)$
+
+Exact version:
+
+```{r eval = TRUE}
+confint(fish_mod_2)
+```
+
+### Part b
+
+When controlling for length...
+
+- we do not have sufficient evidence to conclude that there's a statistically significant difference in mercury concentration by river.
