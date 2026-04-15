@@ -4011,6 +4011,10 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-activities">    
         <li>
+    <a class="dropdown-item" href="../activities/22-hypothesis-testing-details.html">
+ <span class="dropdown-text">Hypothesis Testing- Details</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../activities/21-hypothesis-testing-discovery.html">
  <span class="dropdown-text">Hypothesis Testing- Discovery</span></a>
   </li>  
@@ -4122,8 +4126,11 @@ window.Quarto = {
  <span class="menu-text">!activities/24-hypothesis-testing-considerations.qmd</span>
   </li>
         <li class="sidebar-item">
- <span class="menu-text">activities/22-hypothesis-testing-details.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../activities/22-hypothesis-testing-details.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis Testing- Details</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../activities/21-hypothesis-testing-discovery.html" class="sidebar-item-text sidebar-link">
@@ -4586,10 +4593,10 @@ E[UserScore \mid CriticScore] = \hat{\beta}_0 + \hat{\beta}_1 CriticScore
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try running the following chunk A FEW TIMES</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(fandango, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 2 × 3</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   film       userscore_rt criticscore_rt</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;chr&gt;             &lt;int&gt;          &lt;int&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Amy                  91             97</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Trainwreck           74             85</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   film                    userscore_rt criticscore_rt</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="do">##   &lt;chr&gt;                          &lt;int&gt;          &lt;int&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Avengers: Age of Ultron           86             74</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Magic Mike XXL                    64             62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Reflect:</p>
 <ul>
