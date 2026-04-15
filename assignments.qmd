@@ -14,3 +14,4 @@ Please review the [Practice Problems Policies](https://docs.google.com/document/
 - [Practice Sets 4](assignments/ps4.qmd), due 03/09
 - [Practice Sets 5](assignments/ps5.qmd), due 03/24
 - [Practice Sets 6](assignments/ps6.qmd), due 04/13
+- [Practice Sets 7](assignments/ps7.qmd), due 04/22

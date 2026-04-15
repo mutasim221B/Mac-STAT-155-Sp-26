@@ -115,7 +115,9 @@ confint(mod_fish, level=0.95)
 
 Suppose we take 200 different samples of fish from the Lumber River. Based on these results, in how many of those samples would you expect to observe mean mercury concentration **greater than** 1.25ppm?
 
-> This is certainly plausible, since our 95% CI contains 0 (i.e., there is no difference in means between the two rivers). However, we might also argue that there is SOME evidence of a difference, since most of the CI is > 0.
+> We don't/can't actually know! This depends on the true population parameter and the accuracy of our sampling distribution.
+
+> What we *can* say is that if our sampling distribution model is accurate, then we should expect that about 10 out of 200 samples (5% of them) will produce confidence intervals that *don't* contain the population parameter. We should expect that half of these--so 5 samples--are overestimates and the other half are underestimates.
 
 
 ### part d: intuition for constructing & interpreting test statistics
@@ -152,6 +154,8 @@ fish %>%
 
 > Class Notes
 
+
+
 **Additional Reading (after class): FORMAL HYPOTHESIS TESTS**
 
 Though CIs can help us evaluate hypotheses, **hypothesis tests** provide a more formal approach.
@@ -168,7 +172,7 @@ Or, in context:
 3. Evaluate how compatible our fish sample observations are with the null value (are they consistent with what we'd expect if there were no association?).
 
 
-## Exercise 1: 
+## Exercise 2: 
 
 Let's look at the model summary output again:
 

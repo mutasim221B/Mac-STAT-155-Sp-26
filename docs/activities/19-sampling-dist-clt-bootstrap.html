@@ -4122,7 +4122,7 @@ window.Quarto = {
  <span class="menu-text">!activities/24-hypothesis-testing-considerations.qmd</span>
   </li>
         <li class="sidebar-item">
- <span class="menu-text">!activities/23-hypothesis-testing-details.qmd</span>
+ <span class="menu-text">activities/22-hypothesis-testing-details.qmd</span>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -4469,16 +4469,16 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">## # A tibble: 10 × 5</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">##    River   Station Length Weight Concen</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">##    &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Lumber        1   41     1904   0.9 </span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Wacamaw      12   46.5   1292   0.64</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Lumber        4   39      879   1.4 </span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Wacamaw       8   35      487   1   </span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Wacamaw      10   40      864   0.93</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Wacamaw       8   31      415   0.53</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Wacamaw      10   46.2   1365   0.88</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Wacamaw      14   43.6   1245   1.8 </span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Wacamaw       8   35      487   1   </span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Lumber        2   33.6    360   1.6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  1 Lumber        3   47     1546   1.2 </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  2 Wacamaw       7   31.7    407   0.5 </span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  3 Wacamaw       8   35      487   1   </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  4 Wacamaw      14   58.7   3314   2.9 </span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  5 Wacamaw      15   36      702   0.92</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  6 Lumber        4   41     1042   0.66</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  7 Wacamaw      12   57.5   2401   1.4 </span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  8 Lumber        2   29      271   0.7 </span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  9 Wacamaw      15   49.5   1924   2.3 </span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 Wacamaw      10   36.7    647   2.4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can take a sample and then use the data to estimate the model:</p>
 <div class="cell" data-layout-align="center">
@@ -4492,7 +4492,7 @@ E(Concen | Length) = \beta_0 + \beta_1 Length
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Coefficients:</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)       Length  </span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="do">##    -1.90535      0.08206</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="do">##    0.489782     0.008378</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can also take <em>multiple</em> unique samples and build a sample model from each.</p>
 <p>The code below obtains <em>500</em> separate samples of 10 fish, and stores the model estimates from each:</p>
@@ -5062,7 +5062,7 @@ The standard error of the sample slopes INCREASES / DECREASES / IS FAIRLY STABLE
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sample_models_10 <span class="sc">%&gt;%</span> </span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">sd</span>(Length))</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   sd(Length)</span></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 0.02532877</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 1          0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="a">
 <li><p>95%</p></li>
