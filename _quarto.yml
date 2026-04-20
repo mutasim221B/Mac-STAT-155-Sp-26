@@ -41,7 +41,7 @@ website:
       title: "Activities"
       contents:
           - "!activities/25-f-tests.qmd"
-          - "!activities/24-hypothesis-testing-considerations.qmd"
+          - "activities/23-hypothesis-testing-considerations.qmd"
           - "activities/22-hypothesis-testing-details.qmd"
           - "activities/21-hypothesis-testing-discovery.qmd"
           - "activities/20-confidence-intervals.qmd"
